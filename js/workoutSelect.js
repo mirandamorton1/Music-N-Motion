@@ -1,5 +1,6 @@
 const result = document.getElementById("resultDiv");
 
+
 const submitBtn = document.getElementById("submitButton");
 
 submitBtn.addEventListener("click", (e) => {
@@ -32,5 +33,8 @@ function getExercise(category, level) {
       const { name, instructions } = data[randomNum]
       result.innerText = `${name} ${instructions}`
     });
+    //dont make global variables on window object. 
+    //1. Do we need to move to new page? if we didn't, we could have hidden vs not hidden div. 
+    //2. use local storage for this.
 }
 //<a href="https://www.freepik.com/free-photo/portrait-young-spotive-girl-doing-exercises-with-rope-keeping-body-fit-isolated-green-background-neon_24052841.htm#page=2&position=5&from_view=author">Image by master1305</a> on Freepik

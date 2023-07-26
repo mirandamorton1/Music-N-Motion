@@ -2,7 +2,7 @@
     const iframe = document.querySelector("iframe")
 
 
-    const token = 'BQAe86zC_uGy9thvwiR3M15Tc76G-ZdXI1wX839kdPhk0VzOGmNUjmm0ktEBRuPxYJA2aJbSMK55RXLSvR65kF3YlunB21ZF7vQ0JBgRXyDFlDZx8hkKh8-oo8VTmiDYw42C69Rr6BlmVamFx7vU6PUSSXE6XK5pSOZvOiloyQ84bGREAHSLtfK8yni8HfKeCf3XUV8Y1KDMWFUAE_VlFCn26F65MuRtn0o8ifg6rqRq-QnRQftJHduK_R_om1AOQ9C-5KHjSTCF86grxN14nftD';
+    const token = 'BQDfnvO8Vvfhah62xGkgtT8-3rml7NUC6OE6PV1IfljO5JnhbJp8ljp2Z4LFmMBDLyVAVib7xcmvOleqA9xYj8NzINNzaO1d74-IG3j9I56TcdL8YGB7_UhPRHDBa1DAHYd-2CSbFfT4C0F4koEBLwGo_MCmYycLsugoDI5iNfu2rp9Hp1YYo7j1rvylteW6PzzyrFlRAd2s0yqdvQhwbUX_FBLahY0bfegqUBjP09dUUIp5gtLx_T_lR_YcsiMibo2rgV3bU2_90CTZuWgJEO1o';
     async function fetchWebApi(endpoint, method, body) {
     const res = await fetch(`https://api.spotify.com/${endpoint}`, {
         headers: {
@@ -26,7 +26,7 @@
 
     const playlist = await fetchWebApi(
         `v1/users/${user_id}/playlists`, 'POST', {
-        "name": "My recommendation playlist",
+        "name": "Your recommendation workout playlist ",
         "description": "Playlist created by the tutorial on developer.spotify.com",
         "public": false
     })

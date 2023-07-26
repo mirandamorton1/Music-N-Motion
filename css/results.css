@@ -1,3 +1,28 @@
  .results-title{
     text-align: center;
+    padding: 50px;
+ }
+
+ .workout-container{
+    border: solid black 1px;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 9px;
+    height: 40vh;
+
+ }
+
+ .workout-title{
+    text-align: center;
+
+ }
+
+ .music-container{
+    padding: 15px;
+    height: 40vh;
+
+ }
+
+ h2{
+    font-size: 9vw;
  }

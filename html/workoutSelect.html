@@ -11,16 +11,24 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/workoutSelect.css" />
-    <title>Document</title>
+    <title>Choose Workout</title>
   </head>
   <body>
-    <div class="container-sm">
-      <h1 id="title">Please choose a workout</h1>
-
+    <div class="hero2-image" >
+      <div class="hero2-text">
+        <!-- <h1 class="h1" style="font-size:50px; font-family: 'Roboto', sans-serif;">Please Choose A Workout</h1>
+        <h1 class="h2" style="font-size:40px; font-family: 'Roboto', sans-serif;">The App That Does Something Cool</h1> -->
+      </div>
+    </div>
+    <div class="main">
+      <div class="container-sm">
+        <div class="title-text">
+        <h1 id="title">Please choose a workout</h1>
+      </div>
       <form>
         <br />
         <div class="mb-3">
-          <label>Type</label>
+          <label>Do we need this label?</label>
           <select class="form-select" id="typeInput" name="typeInput" required>
             <option disabled selected hidden>Type of Workout</option>
             <option value="cardio">Cardio</option>
@@ -45,12 +53,14 @@
               type="submit"
               id="submitButton"
               value="Get my plan"
+              onClick="getResults()"
             />
           </label>
         </div>
+      </div>
       </form>
-      <div id="resultDiv"></div>
     </div>
-    <script src="/js/workoutSelect.js"></script>
+    <script src="/js/workoutSelect.js">
+    </script>
   </body>
 </html>

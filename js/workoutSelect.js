@@ -14,6 +14,7 @@ submitBtn.addEventListener("click", (e) => {
 });
 
 function getResults() {
+  // e.preventDefault();
   window.location.href="results.html"
 }
 
@@ -31,7 +32,8 @@ function getExercise(category, level) {
       // result.innerText = data[randomNum].name;
       //object destructuring
       const { name, instructions } = data[randomNum]
-      result.innerText = `${name} ${instructions}`
+      localStorage.setItem("name", name)
+      localStorage.setItem("instructions", instructions)
     });
     //dont make global variables on window object. 
     //1. Do we need to move to new page? if we didn't, we could have hidden vs not hidden div. 

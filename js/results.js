@@ -1,3 +1,7 @@
+//get item
+// document.getElementById("workout-name").innerHTML += localStorage.getItem("name");
+// document.getElementById("how-to").innerHTML += localStorage.getItem("instructions");
+
 (async () => {
     const iframe = document.querySelector("iframe")
 

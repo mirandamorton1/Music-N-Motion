@@ -15,12 +15,16 @@
   </head>
   <body>
     <div class="hero2-image" >
+      <svg class="bi bi-arrow-left" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+      </svg>
       <div class="hero2-text">
         <!-- <h1 class="h1" style="font-size:50px; font-family: 'Roboto', sans-serif;">Please Choose A Workout</h1>
         <h1 class="h2" style="font-size:40px; font-family: 'Roboto', sans-serif;">The App That Does Something Cool</h1> -->
       </div>
     </div>
     <div class="main">
+      <i class="bi bi-arrow-left"></i>
       <div class="container-sm">
         <div class="title-text">
         <h1 id="title">Please choose a workout</h1>
@@ -46,13 +50,12 @@
             <option value="intermediate">Intermediate</option>
             <option value="expert">Expert</option>
           </select>
-          <br>
-          <label>
+          <label class="btn">
             <input
               class="btn btn-info"
               type="submit"
               id="submitButton"
-              value="Get my plan"
+              value="Get My Plan"
               onClick="getResults()"
             />
           </label>

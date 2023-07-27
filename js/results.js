@@ -1,5 +1,5 @@
 document.getElementById("workout-name").innerText += localStorage.getItem("name");
-document.getElementById("how-to").innerText += localStorage.getItem("instructions");
+document.getElementById("equipment").innerText += localStorage.getItem("equipment");
 
 
 
@@ -7,7 +7,7 @@ document.getElementById("how-to").innerText += localStorage.getItem("instruction
     const iframe = document.querySelector("iframe")
 
 
-    const token = 'BQD5Jm3soT6osltie1shSlUAVRj_-zyqKYty5USw-Ot5KD6AGQukO8lQRS1_Ak3rWpgp2Aj3fSUAUizk4YN5yTtyEpfWpEf7zn3LjQcJesMt0GPD-cPrwiWpyVspr1BPfuXiaqc4Bdk-OqFHNiOjJqtGbb6SjIAZo8o6lSBGJSpSqluzwvF-gmzCaL7PIt74yaMv5x2w2QutEbbrRBkK4pt9ktXdnJ7TEsIsPyChbTJQ1aelxfDdhsV8o0SOhXuT4TC2nasMwXLNfGxd6q-ODUWP';
+    const token = 'BQAGyN2r6ADBW9NKI_Sqpxv2EVAHS8F3NW-S51hLIY3wCFF48HpXptISdXn7t52ASCzWfkr_rSwtcmdUg-vu02Ij6IoDGemrZ9toILxbAOj96p8nas6yOGVxTggqYHsDL1JTu-_G6NIvEnzJdrYOB5iYGzJKirUADh8lJkq_FJS9JpT4wTrPkTUa3J_0MJNy3M19in51ykHqdrBXBPYJv9TLG7JcJGr0b7UAS8WmI-pRcrPk9RGbc07uV9uUAPwyusVBmZHmrcR1YKZMX1kFH8UB';
     async function fetchWebApi(endpoint, method, body) {
     const res = await fetch(`https://api.spotify.com/${endpoint}`, {
         headers: {

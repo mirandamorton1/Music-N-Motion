@@ -12,7 +12,7 @@ submitBtn.addEventListener("click", (e) => {
   getExercise(category, level);
   setTimeout(() => {
     window.location.href = "results.html";
-  }, 4000);
+  }, 1000);
 });
 
 // function getResults(){
@@ -39,12 +39,12 @@ function getExercise(category, level) {
       // result.innerText = data[randomNum].name;
       // result.innerText = data[randomNum].name;
       //object destructuring
-      const { name, instructions } = data[randomNum];
-      console.log(name, instructions);
+      const { name, equipment } = data[randomNum];
+      console.log(name, equipment);
       localStorage.clear();
 
       localStorage.setItem("name", name);
-      localStorage.setItem("instructions", instructions);
+      localStorage.setItem("equipment", equipment);
     });
 
   //dont make global variables on window object.

@@ -19,13 +19,6 @@ submitBtn.addEventListener("click", (e) => {
   }, 1000);
 });
 
-// function getResults(){
-//   // e.preventDefault();
-//   window.location.href="results.html"
-// }
-
-
-
 
 function getExercise(category, level) {
   fetch(
@@ -40,21 +33,11 @@ function getExercise(category, level) {
     .then((data) => {
       console.log(data);
       const randomNum = Math.floor(Math.random() * data.length);
-      // result.innerText = data[randomNum].name;
-      // result.innerText = data[randomNum].name;
-      //object destructuring
       const { name, equipment } = data[randomNum];
-
-
-      console.log(name, equipment );
-      // localStorage.clear();
-
-
-
+      console.log(name, equipment);
+      localStorage.clear();
       localStorage.setItem("name", name);
       localStorage.setItem("equipment", equipment);
     });
 
 }
-
-//<a href="https://www.freepik.com/free-photo/portrait-young-spotive-girl-doing-exercises-with-rope-keeping-body-fit-isolated-green-background-neon_24052841.htm#page=2&position=5&from_view=author">Image by master1305</a> on Freepik

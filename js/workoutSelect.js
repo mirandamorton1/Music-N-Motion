@@ -35,7 +35,7 @@ function getExercise(category, level) {
       const randomNum = Math.floor(Math.random() * data.length);
       const { name, equipment } = data[randomNum];
       console.log(name, equipment);
-      localStorage.clear();
+      // localStorage.clear();
       localStorage.setItem("name", name);
       localStorage.setItem("equipment", equipment);
     });

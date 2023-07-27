@@ -2,6 +2,9 @@
     background-image: linear-gradient(to top left, #196767 10%, #196767 50%, #FF4F4F 90%);
     background-size: cover;
     background-attachment: fixed;
+    /* color: rgb(194, 253, 255); */
+    color:whitesmoke;
+
 }
  
  
@@ -10,12 +13,6 @@
     padding: 50px;
 
  }
-
- .bi {
-    margin-left: 20px;
-    margin-top: 20px;
-    color:white;
-}
 
  .workout-container{
     padding: 15px;
@@ -63,8 +60,14 @@ iframe{
     min-height: 300px;
 }
 
+.userGuide{
+    font-size: 4vh;
+    padding-left: 50px;
+}
 
-
+.bi{
+    margin: 20px;
+}
 
 @media screen and (min-height: 833px) and (max-width: 770px) {
     iframe {

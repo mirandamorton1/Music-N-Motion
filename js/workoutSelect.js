@@ -20,6 +20,9 @@ submitBtn.addEventListener("click", (e) => {
 //   window.location.href="results.html"
 // }
 
+
+
+
 function getExercise(category, level) {
   fetch(
     `https://api.api-ninjas.com/v1/exercises?type=${category}&difficulty=${level}`,

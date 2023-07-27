@@ -44,17 +44,17 @@ function getExercise(category, level) {
       // result.innerText = data[randomNum].name;
       //object destructuring
       const { name, equipment } = data[randomNum];
+
+
       console.log(name, equipment );
       // localStorage.clear();
+
 
 
       localStorage.setItem("name", name);
       localStorage.setItem("equipment", equipment);
     });
 
-  //dont make global variables on window object.
-  //1. Do we need to move to new page? if we didn't, we could have hidden vs not hidden div.
-  //2. use local storage for this.
 }
 
 //<a href="https://www.freepik.com/free-photo/portrait-young-spotive-girl-doing-exercises-with-rope-keeping-body-fit-isolated-green-background-neon_24052841.htm#page=2&position=5&from_view=author">Image by master1305</a> on Freepik

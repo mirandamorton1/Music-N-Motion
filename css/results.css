@@ -11,6 +11,12 @@
 
  }
 
+ .bi {
+    margin-left: 20px;
+    margin-top: 20px;
+    color:white;
+}
+
  .workout-container{
     padding: 15px;
     margin: 20px;

@@ -27,31 +27,35 @@
     <title>Music in Motion</title>
   </head>
   <body>
-    <!-- <div class="hero-image"> -->
     <img class="hero-image" src="/assets/images/photo11.png" alt="" />
     <div class="hero-text">
-      <h1
-        class="h1"
-        style="font-size: 7.2vw; font-family: 'Roboto', sans-serif"
-      >
-        Music In Motion
-      </h1>
-      <h2
-        class="h2"
-        style="font-size: 2.3vw; font-family: 'Roboto', sans-serif"
-      >
+      <h1 class="app-title">Music In Motion</h1>
+      <h2 class="app-description" style="font-family: 'Roboto', sans-serif">
         The App that creates a custom playlist to go with your workout!
       </h2>
 
       <button
         onclick="getWorkoutSelect()"
+        id="start-workout"
         class="btn-lg rounded"
-        style="font-size: 2vw"
       >
-        Start Workout<span class="button-arrow">&gt;</span>
+        Start Workout
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          fill="currentColor"
+          class="bi bi-arrow-right"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+          />
+        </svg>
       </button>
     </div>
-    <!-- </div> -->
+
     <script src="/js/home.js"></script>
   </body>
 </html>

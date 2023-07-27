@@ -1,13 +1,15 @@
 document.getElementById("workout-name").innerText += localStorage.getItem("name");
 document.getElementById("equipment").innerText += localStorage.getItem("equipment");
 
-
-
 (async () => {
+    const category = localStorage.getItem("category")
+    console.log(category)
+    console.log(localStorage,"local storage")
+
     const iframe = document.querySelector("iframe")
 
 
-    const token = 'BQAGyN2r6ADBW9NKI_Sqpxv2EVAHS8F3NW-S51hLIY3wCFF48HpXptISdXn7t52ASCzWfkr_rSwtcmdUg-vu02Ij6IoDGemrZ9toILxbAOj96p8nas6yOGVxTggqYHsDL1JTu-_G6NIvEnzJdrYOB5iYGzJKirUADh8lJkq_FJS9JpT4wTrPkTUa3J_0MJNy3M19in51ykHqdrBXBPYJv9TLG7JcJGr0b7UAS8WmI-pRcrPk9RGbc07uV9uUAPwyusVBmZHmrcR1YKZMX1kFH8UB';
+    const token = 'BQBrhjUpDFkva2sMSc_e1HaBdP7K_mMXkjaJbop5v6sdRQps0LpUxnhTUn8imW8tpEHynTly1TXf06fZtyWsjAoZnZFre5x4UUK0OzXyrycOfTadJAMWUTmY2ozv-g-LV0RHPZdZQ530VQMj8J6rHf5RVKObnwtY6PvCmZ56nhtq3WwoZJIylnxPxLqdZBRXy9Sp6Kb2T5l8mdQ9KPBM2Vy5TzVrnp1s2oQ8hX4emiNd5F5pp4VXkqRYFsrneIBtp5ifgN9yk89TZnLI1gEMJa0Y';
     async function fetchWebApi(endpoint, method, body) {
     const res = await fetch(`https://api.spotify.com/${endpoint}`, {
         headers: {
@@ -16,13 +18,16 @@ document.getElementById("equipment").innerText += localStorage.getItem("equipmen
         method,
         body:JSON.stringify(body)
     });
+
     return await res.json();
     }
 
 
     async function getTracksByGenre(genre) {
         const response = await fetchWebApi(`v1/search?q=genre:${encodeURIComponent(genre)}&type=track&limit=10`, 'GET');
+
         return response.tracks.items.map(item => item.uri);
+        
       }
 
 
@@ -34,8 +39,8 @@ document.getElementById("equipment").innerText += localStorage.getItem("equipmen
         "name": "Your recommendation workout playlist ",
         "description": "Playlist created by the tutorial on developer.spotify.com",
         "public": false
+        
     })
-    console.log(playlist)
     await fetchWebApi(
         `v1/playlists/${playlist.id}/tracks?uris=${tracksUri.join(',')}`,
         'POST'
@@ -44,9 +49,37 @@ document.getElementById("equipment").innerText += localStorage.getItem("equipmen
     return playlist;
     }
 
-    const genre = "heavy-metal";
+    let genre = ""
+    console.log(category)
+
+    if(category == "olympic_weightlifting"){
+        genre = "metalcore";
+    } else if(category == "cardio"){
+        genre = "power";
+    } else if(category == "ploymetrics"){
+        genre = "workout";
+    } else if(category == "powerlifting"){
+        genre = "heavy-metal";
+    } else if(category == "strength"){
+        genre = "punk-rock";
+    } else if(category == "stretching"){
+        genre = "dance";
+    } else if(category == "strongman"){
+        genre = "death-metal";
+    }
+
+
     const tracksUri = await getTracksByGenre(genre);
     const createdPlaylist = await createPlaylist(tracksUri);
-    console.log(createdPlaylist.name, createdPlaylist.id);
     iframe.src = `https://open.spotify.com/embed/playlist/${createdPlaylist.id}?utm_source=generator&theme=0`;
 })()
+
+
+// cardio -- power
+// olympic weightlifting -- metalcore
+// ploymetrics --  workout
+// powerlifting -- heavy-metal
+// strength -- punk-rock
+// stretching -- dance
+// strongman -- death-metal
+

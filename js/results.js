@@ -1,15 +1,19 @@
-document.getElementById("workout-name").innerText += localStorage.getItem("name");
-document.getElementById("equipment").innerText += localStorage.getItem("equipment");
-
 (async () => {
+    const workoutName = document.getElementById("workout-name") 
+    const typeOfWorkout = localStorage.getItem("name");
+    let workoutTypeToPage = " "
+    workoutTypeToPage += typeOfWorkout.replace(/_/g, ' ')
+    workoutName.innerText += workoutTypeToPage
+    const equipment = document.getElementById("equipment")
+    const typeOfEquipment = localStorage.getItem("equipment");
+    let equipmentToPage = " "
+    equipmentToPage += typeOfEquipment.replace(/_/g, ' ').replace(/\b\w/g, (match) => match.toLocaleUpperCase());
+    equipment.innerText += equipmentToPage
+    
     const category = localStorage.getItem("category")
-    console.log(category)
-    console.log(localStorage,"local storage")
-
     const iframe = document.querySelector("iframe")
 
-
-    const token = 'BQBrhjUpDFkva2sMSc_e1HaBdP7K_mMXkjaJbop5v6sdRQps0LpUxnhTUn8imW8tpEHynTly1TXf06fZtyWsjAoZnZFre5x4UUK0OzXyrycOfTadJAMWUTmY2ozv-g-LV0RHPZdZQ530VQMj8J6rHf5RVKObnwtY6PvCmZ56nhtq3WwoZJIylnxPxLqdZBRXy9Sp6Kb2T5l8mdQ9KPBM2Vy5TzVrnp1s2oQ8hX4emiNd5F5pp4VXkqRYFsrneIBtp5ifgN9yk89TZnLI1gEMJa0Y';
+    const token = 'BQClPN1Tp57KDvVkT7WCIvO--vHTm3eUNfWez-gO9BflyTNgjKolNhBMZTZ_Ua3CtDA-AHuFij_Fdld80v8WM4AihTFgPt1TOaBi5_6M0kh8Q0LPsWCcxO69Pc4yTRK9LNN6-6KxmlN28GNQcV-UobyCkNxmpDyJc9fDS5HFMUlfUs1xm9FE8F4eispYCp8gcrTVywnJ0wrVrUKzG9BfzUTrpeqD1mJn33fPzLWxKI8jl0Hf5bebtn0CKyPRBMFoQ8LDKAh4_-QeeQjZegD2I9xp';
     async function fetchWebApi(endpoint, method, body) {
     const res = await fetch(`https://api.spotify.com/${endpoint}`, {
         headers: {
@@ -50,7 +54,6 @@ document.getElementById("equipment").innerText += localStorage.getItem("equipmen
     }
 
     let genre = ""
-    console.log(category)
 
     if(category == "olympic_weightlifting"){
         genre = "metalcore";
@@ -66,6 +69,8 @@ document.getElementById("equipment").innerText += localStorage.getItem("equipmen
         genre = "dance";
     } else if(category == "strongman"){
         genre = "death-metal";
+    } else{
+        genre = "power-pop";
     }
 
 
@@ -74,12 +79,4 @@ document.getElementById("equipment").innerText += localStorage.getItem("equipmen
     iframe.src = `https://open.spotify.com/embed/playlist/${createdPlaylist.id}?utm_source=generator&theme=0`;
 })()
 
-
-// cardio -- power
-// olympic weightlifting -- metalcore
-// ploymetrics --  workout
-// powerlifting -- heavy-metal
-// strength -- punk-rock
-// stretching -- dance
-// strongman -- death-metal
 

@@ -6,7 +6,11 @@ submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   typeInput = document.getElementById("typeInput");
   let category = typeInput.value;
-  console.log(category);
+
+  console.log(category,"category");
+
+  localStorage.setItem("category", category);
+
   levelInput = document.getElementById("levelInput");
   let level = levelInput.value;
   getExercise(category, level);
@@ -40,8 +44,9 @@ function getExercise(category, level) {
       // result.innerText = data[randomNum].name;
       //object destructuring
       const { name, equipment } = data[randomNum];
-      console.log(name, equipment);
-      localStorage.clear();
+      console.log(name, equipment );
+      // localStorage.clear();
+
 
       localStorage.setItem("name", name);
       localStorage.setItem("equipment", equipment);

@@ -39,37 +39,55 @@
       <form>
         <br />
         <div class="mb-3">
-          <label>Do we need this label?</label>
-          <select class="form-select" id="typeInput" name="typeInput" required>
-            <option disabled selected hidden>Type of Workout</option>
-            <option value="cardio">Cardio</option>
-            <option value="olympic_weightlifting">Olympic Weightlifting</option>
-            <option value="plyometrics">Plyometrics</option>
-            <option value="powerlifting">Powerlifting</option>
-            <option value="strength">Strength</option>
-            <option value="stretching">Stretching</option>
-            <option value="strongman">Strongman</option>
-          </select>
+          <div class="d-grid gap-2" id="typeInput" name="typeInput" required>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                <input type="radio" class="btn-check" name="type" id="cardio" value="cardio" autocomplete="off" >
+                <label class="btn btn-outline-primary" for="cardio">Cardio</label>
+
+                <input type="radio" class="btn-check" name="type" id="strength" value="strength" autocomplete="off" >
+                <label class="btn btn-outline-primary" for="strength">Strength</label>
+
+                <input type="radio" class="btn-check" name="type" id="plyometerics" value="plyometerics" autocomplete="off" >
+                <label class="btn btn-outline-primary" for="plyometerics">Plyometerics</label>
+
+                <input type="radio" class="btn-check" name="type" id="powerlifting" value="powerlifting" autocomplete="off" >
+                <label class="btn btn-outline-primary" for="powerlifting">Powerlifting</label>
+
+                <input type="radio" class="btn-check" name="type" id="olympic_weightlifting" value="olympic_weightlifting" autocomplete="off" >
+                <label class="btn btn-outline-primary" for="olympic_weightlifting">Olympic Weightlifting</label>
+
+                <input type="radio" class="btn-check" name="type" id="stretching" value="stretching" autocomplete="off" >
+                <label class="btn btn-outline-primary" for="stretching">Stretching</label>
+
+                <input type="radio" class="btn-check" name="type" id="strongman" value="strongman" autocomplete="off" >
+                <label class="btn btn-outline-primary" for="strongman">Strongman</label>
+
+                <br>
+            </div>
+            <div>
+                <input type="radio" class="btn-check" name="level" id="beginner" value="beginner" autocomplete="off" >
+                <label class="btn btn-outline-primary" for="beginner">Beginner</label>
+
+                <input type="radio" class="btn-check" name="level" id="intermediate" value="intermediate" autocomplete="off" >
+                <label class="btn btn-outline-primary" for="intermediate">Intermediate</label>
+
+                <input type="radio" class="btn-check" name="level" id="expert" value="expert" autocomplete="off" >
+                <label class="btn btn-outline-primary" for="expert">Expert</label>
+            </div>
           <br>
-          <select class="form-select" id="levelInput" name="levelInput">
-            <option disabled selected hidden>Level of Difficulty</option>
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="expert">Expert</option>
-          </select>
           <label class="btn">
-            <input
+            <button
               class="btn btn-info"
-              type="submit"
               id="submitButton"
-              value="Get My Plan"
-              
-            />
+              onclick="displayRadioValue()">Submit
+          </button>
           </label>
         </div>
       </div>
       </form>
     </div>
+    <div id="result"></div>
     <script src="/js/workoutSelect.js">
 
     </script>

@@ -1,24 +1,18 @@
-const result = document.getElementById("resultDiv");
-
 const submitBtn = document.getElementById("submitButton");
 
-submitBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  typeInput = document.getElementById("typeInput");
-  let category = typeInput.value;
+function displayRadioValue() {
+  let category = "";
+  let level = "";
 
-  console.log(category,"category");
+  const categoryHTML = document.querySelector("input[name=type]:checked");
+  const levelHTML = document.querySelector("input[name=level]:checked");
 
-  localStorage.setItem("category", category);
-
-  levelInput = document.getElementById("levelInput");
-  let level = levelInput.value;
+  category = categoryHTML.value;
+  level = levelHTML.value;
+  localStorage.setItem("category", categoryHTML.value);
+  localStorage.setItem("level", levelHTML.value);
   getExercise(category, level);
-  setTimeout(() => {
-    window.location.href = "results.html";
-  }, 1000);
-});
-
+}
 
 function getExercise(category, level) {
   fetch(
@@ -31,13 +25,18 @@ function getExercise(category, level) {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       const randomNum = Math.floor(Math.random() * data.length);
       const { name, equipment } = data[randomNum];
-      console.log(name, equipment);
       // localStorage.clear();
       localStorage.setItem("name", name);
       localStorage.setItem("equipment", equipment);
     });
-
 }
+
+submitBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  displayRadioValue();
+  setTimeout(() => {
+    window.location.href = "results.html";
+  }, 1000);
+});

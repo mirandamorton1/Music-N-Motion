@@ -7,13 +7,13 @@ body {
   );
   background-size: cover;
   background-attachment: fixed;
-  /* color: rgb(194, 253, 255); */
   color: whitesmoke;
 }
 
 .results-title {
   text-align: center;
   padding: 50px;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
 }
 
 .workout-container {
@@ -21,10 +21,17 @@ body {
   margin: 20px;
   border-radius: 9px;
   height: 40vh;
+  text-align: left;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
 
 .workout-title {
-  text-align: center;
+  text-align: left;
+  font-size: 3vw;
+}
+.userGuide {
+  font-size: 2.2vw;
+  padding-left: 50px;
 }
 
 .music-container {
@@ -56,6 +63,7 @@ h2 {
 .music-title {
   text-align: center;
   font-size: 16px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
 
 iframe {
@@ -63,15 +71,18 @@ iframe {
   border-radius: 5px;
 }
 
-.userGuide {
-  font-size: 4vh;
-  padding-left: 50px;
-}
-
 .bi {
   margin: 20px;
 }
 
+@media (max-width: 768px) {
+  .workout-title {
+    font-size: 20px;
+  }
+  .userGuide {
+    font-size: 15px;
+  }
+}
 /* @media screen and (min-height: 833px) and (max-width: 770px) {
     iframe {
         max-height: 334px

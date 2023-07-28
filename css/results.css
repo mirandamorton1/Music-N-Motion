@@ -1,75 +1,78 @@
- body{
-    background-image: linear-gradient(to top left, #196767 10%, #196767 50%, #FF4F4F 90%);
-    background-size: cover;
-    background-attachment: fixed;
-    /* color: rgb(194, 253, 255); */
-    color:whitesmoke;
-
+body {
+  background-image: linear-gradient(
+    to top left,
+    #196767 10%,
+    #196767 50%,
+    #ff4f4f 90%
+  );
+  background-size: cover;
+  background-attachment: fixed;
+  /* color: rgb(194, 253, 255); */
+  color: whitesmoke;
 }
- 
- 
- .results-title{
-    text-align: center;
-    padding: 50px;
 
- }
+.results-title {
+  text-align: center;
+  padding: 50px;
+}
 
- .workout-container{
-    padding: 15px;
-    margin: 20px;
-    border-radius: 9px;
-    height: 40vh;
+.workout-container {
+  padding: 15px;
+  margin: 20px;
+  border-radius: 9px;
+  height: 40vh;
+}
 
- }
+.workout-title {
+  text-align: center;
+}
 
- .workout-title{
-    text-align: center;
+.music-container {
+  margin: 30px 50px 30px 50px;
+  height: 50vh;
+  padding: 15px;
+  padding-bottom: 50px;
+  background-image: linear-gradient(
+    to top left,
+    #2da1a1 10%,
+    #208181 60%,
+    #ff2929 100%
+  );
+  border-radius: 9px;
+}
 
- }
-
- .music-container{
-    margin: 30px 50px 0px 50px;
-    height: 50vh;
-    padding: 15px;
-    padding-bottom: 50px;
-    background-image: linear-gradient(to top left, #2da1a1 10%, #208181 60%, #ff2929 100%);
-    border-radius: 9px;
- }
-
- h2{
-    font-size: 9vw;
- }
-
+h2 {
+  font-size: 9vw;
+}
 
 .hero-img-results {
-    background-image: url("/assets/images/photo6.jpg");
-    height: 65vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+  background-image: url("/assets/images/photo6.jpg");
+  /* height: 65vh; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
-
-.music-title{
-    text-align: center;
-    font-size: 16px;
-
+.music-title {
+  text-align: center;
+  font-size: 16px;
 }
 
-iframe{
-    min-height: 300px;
+iframe {
+  /* min-height: 300px; */
+  border-radius: 5px;
 }
 
-.userGuide{
-    font-size: 4vh;
-    padding-left: 50px;
+.userGuide {
+  font-size: 4vh;
+  padding-left: 50px;
 }
 
-.bi{
-    margin: 20px;
+.bi {
+  margin: 20px;
 }
 
-@media screen and (min-height: 833px) and (max-width: 770px) {
+/* @media screen and (min-height: 833px) and (max-width: 770px) {
     iframe {
         max-height: 334px
     }
@@ -107,6 +110,4 @@ iframe{
     .music-container {
         height: 30vh;
     }
-}
-
-
+} */

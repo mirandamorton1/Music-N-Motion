@@ -1,4 +1,8 @@
 (async () => {
+    console.log(localStorage)
+  const instructions = localStorage.getItem("instructions")
+  const instructionDiv = document.querySelector(".workoutDiscr")
+  instructionDiv.innerText += instructions
   const workoutName = document.getElementById("workout-name");
   const typeOfWorkout = localStorage.getItem("name");
   let workoutTypeToPage = " ";

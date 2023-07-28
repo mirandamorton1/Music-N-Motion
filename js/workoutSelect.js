@@ -25,11 +25,14 @@ function getExercise(category, level) {
       return response.json();
     })
     .then((data) => {
+      console.log(data)
       const randomNum = Math.floor(Math.random() * data.length);
-      const { name, equipment } = data[randomNum];
+      const { name, equipment, instructions } = data[randomNum];
       // localStorage.clear();
       localStorage.setItem("name", name);
       localStorage.setItem("equipment", equipment);
+      localStorage.setItem("instructions", instructions);
+
     });
 }
 

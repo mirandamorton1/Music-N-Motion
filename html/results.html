@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/results.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/results.css" />
     <title>Results</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="hero-img-results">
-        <a href="/html/workoutSelect.html">
-            <svg class="bi bi-arrow-left" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-            </svg>
-            </a>
-        <h2 class = "results-title">Here's Your Plan!</h2>
-        <div class="workout-container">
-            <h4 class = "workout-title">Your workout:</h4>
-            <p id="workout-name" class = "userGuide">Name:</p>
-            <p id="equipment" class = "userGuide">Equipment Needed:</p>
-        </div>
+      <a href="/html/workoutSelect.html">
+        <svg
+          class="bi bi-arrow-left"
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          fill="currentColor"
+          class="bi bi-arrow-left"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+          />
+        </svg>
+      </a>
+      <h2 class="results-title">Here's Your Plan!</h2>
+
+      <div class="workout-container">
+        <h4 class="workout-title">Your workout:</h4>
+        <p id="workout-name" class="userGuide">Name:</p>
+        <p id="equipment" class="userGuide">Equipment Needed:</p>
+      </div>
     </div>
     <div class="music-container">
-        <h4 class = "music-title">Here is a recomended Spotify playlist to go with your workout</h4>
-        <iframe
+      <h4 class="music-title">
+        Here is a recomended Spotify playlist to go with your workout
+      </h4>
+      <iframe
         title="Spotify Embed: Recommendation Playlist"
         width="100%"
         height="100%"
-        frameBorder="0"
+        frameborder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
-    ></iframe>
-
+      ></iframe>
     </div>
-    
-     <script src="/js/results.js"></script>
-</body>
-</html>
 
+    <script src="/js/results.js"></script>
+  </body>
+</html>

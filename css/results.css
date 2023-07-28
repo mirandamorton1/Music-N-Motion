@@ -8,7 +8,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
   color: whitesmoke;
-  
 }
 
 .results-title {
@@ -34,7 +33,6 @@ body {
   font-size: 2.2vw;
   padding-left: 50px;
 }
-
 
 .music-container {
   margin: 30px 50px 30px 50px;
@@ -73,18 +71,17 @@ iframe {
   border-radius: 5px;
 }
 
-
 .bi {
   margin: 20px;
 }
 
-@media (max-width: 768px){
-.workout-title {
-  font-size: 20px;
-}
-.userGuide {
-  font-size: 15px;
-}
+@media (max-width: 768px) {
+  .workout-title {
+    font-size: 20px;
+  }
+  .userGuide {
+    font-size: 15px;
+  }
 }
 /* @media screen and (min-height: 833px) and (max-width: 770px) {
     iframe {

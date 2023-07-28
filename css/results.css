@@ -12,7 +12,7 @@ body {
 
 .results-title {
   text-align: center;
-  padding: 50px;
+  padding: 15vw;
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
 }
 
@@ -23,14 +23,29 @@ body {
   height: 40vh;
   text-align: left;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+  margin: 30px 50px 30px 50px;
+  height: 50vh;
+  padding: 15px;
+  padding-bottom: 50px;
+  background-image: linear-gradient(
+    to top left,
+    #2da1a1 10%,
+    #208181 60%,
+    #ff2929 100%
+  );
+  border-radius: 9px;
 }
 
 .workout-title {
-  text-align: left;
-  font-size: 3vw;
+  /* text-align: left; */
+  text-align: center;
+  font-size: 4vw;
+  padding-top: 50px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+
 }
 .userGuide {
-  font-size: 2.2vw;
+  font-size: 3vw;
   padding-left: 50px;
 }
 
@@ -58,12 +73,14 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  /* width: 100%; */
 }
 
 .music-title {
   text-align: center;
-  font-size: 16px;
+  font-size: 3vw;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+  margin-top: 90px;
 }
 
 iframe {
@@ -73,6 +90,11 @@ iframe {
 
 .bi {
   margin: 20px;
+}
+
+.yourWorkout{
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 @media (max-width: 768px) {

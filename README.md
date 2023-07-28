@@ -5,7 +5,7 @@
   ## Description
   This app will generate a custom playlist based off of the type of workout and intensity you choose. Answer the questions and submit the form to see your workout plan!
 
-  ![Uploading Screenshot 2023-07-28 at 3.19.36 PM.png…]()
+Screenshots will go here:
 
 
   ## Table of Contents

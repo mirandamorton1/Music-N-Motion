@@ -10,6 +10,7 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <script src="https://kit.fontawesome.com/5d880c53f9.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,7 +42,7 @@
         <br />
         <div class="mb-3">
           <div class="gap-2" id="typeInput" name="typeInput">
-            <div class="d-grid gap-2" role="group" aria-label="Basic radio toggle button group">
+            <div class="d-grid gap-2" id="form1"role="group" aria-label="Basic radio toggle button group">
                 <input type="radio" class="btn-check" name="type" id="cardio" value="cardio" autocomplete="off" >
                 <label class="btn btn-outline-primary" for="cardio">Cardio</label>
 
@@ -62,16 +63,13 @@
 
                 <input type="radio" class="btn-check" name="type" id="strongman" value="strongman" autocomplete="off" >
                 <label class="btn btn-outline-primary" for="strongman">Strongman</label>
-
-                <br>
             </div>
-            <div class="d-grid gap-2" role="group" aria-label="Basic radio toggle button group">
+            <hr style="opacity:1; border: 1px solid rgb(48, 53, 205)">
+            <div class="btn-group" id="form-2"role="group" aria-label="Basic radio toggle button group">
                 <input type="radio" class="btn-check" name="level" id="beginner" value="beginner" autocomplete="off" >
-                <label class="btn btn-outline-primary" for="beginner">Beginner</label>
-
+                <label class="btn btn-outline-primary" for="beginner" >Beginner</label>
                 <input type="radio" class="btn-check" name="level" id="intermediate" value="intermediate" autocomplete="off" >
                 <label class="btn btn-outline-primary" for="intermediate">Intermediate</label>
-
                 <input type="radio" class="btn-check" name="level" id="expert" value="expert" autocomplete="off" >
                 <label class="btn btn-outline-primary" for="expert">Expert</label>
             </div>

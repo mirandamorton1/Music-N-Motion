@@ -6,7 +6,6 @@ function displayRadioValue() {
 
   const categoryHTML = document.querySelector("input[name=type]:checked");
   const levelHTML = document.querySelector("input[name=level]:checked");
-
   category = categoryHTML?.value;
   level = levelHTML?.value;
   if(!category && !level) {
@@ -21,6 +20,10 @@ function displayRadioValue() {
   console.log(category, level)
   }
 }
+
+// function myFunction() {
+//   document.getElementById('form-1').style.display='none';document.getElementById('form-2').style.display = 'block';
+// }
 
 function getExercise(category, level) {
   fetch(

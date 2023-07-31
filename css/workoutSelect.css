@@ -1,7 +1,7 @@
 body {
     height: 100%;
     margin: 0;
-        background-image: linear-gradient(to right, rgba(251, 243, 243, 0), rgb(68, 156, 233));
+        background-image: linear-gradient(to right, rgba(251, 243, 243, 0), rgb(206, 229, 249));
         background-size: cover;
         background-attachment: fixed;
 
@@ -17,8 +17,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    /* border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px; */
 }
 
 .bi {
@@ -38,6 +38,7 @@ body {
 
 .title-text {
     text-align: center;
+    color: blue
     
 } 
 
@@ -49,10 +50,14 @@ form {
     background-color:rgb(251, 243, 243);
 }
 
+
 .btn {
     display: flex;
     justify-content: center;
 
+}
+.btn-group {
+    display:flex;
 }
 
 #submitButton {

@@ -19,7 +19,7 @@
   const category = localStorage.getItem("category");
   const iframe = document.querySelector("iframe");
 
-  const token = "BQBv_pPY2AS_lssJZD9BT6rSM4t8CX6xPlq9Afc6lM1YFTRUmDREg_YTkcp7wi0DS7HwYTsSMLxRQ2RvOrRZN4H6_AUSa5U7UIU89IyexC650L3s5RyBDIPwb_3BEP06W34cj4VBaX7TqrAf0YnWjZuOZuXjSG3iOWRdM69pFHBwwSiuixFL09CwOAyM8bR9eVoI0pq9WO6_miRwXQN8FL5RmcqzC9d0RPOzUuH_x71Slo8Pk_TcwxX8CxN-95wgCxz588PvsNukoqHTE81oQoge";
+  const token = "BQCvneyXTtAiKzQD0vcxHItc5pwGk66y9InRCoY_zq6mjQI2Q69GiM-vOFvPMaBVEFxVAWhQxFOxrDax-1JudepIs2YjSwKdK_6pGSfLkTasl_tFvpHnAU_bcDrH9aj401eonY3igEdOb5mZwOQZ99Y7L8-X4ND04ie_jZRYK44UJvbdGDbGfhn3G8ROl5I9F_aSy6Rbk4qQ1VpY4de07lupF-qSwN0T3a02f_DP24Ctw86TmEI74YoU2n60pnn_-nyd5cJA_ezK8_67VnJcHzpg";
   async function fetchWebApi(endpoint, method, body) {
     const res = await fetch(`https://api.spotify.com/${endpoint}`, {
       headers: {

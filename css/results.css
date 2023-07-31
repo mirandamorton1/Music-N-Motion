@@ -1,10 +1,11 @@
 body {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to top left,
     #196767 10%,
     #196767 50%,
     #ff4f4f 90%
-  );
+  ); */
+  background-color: #208181;
   background-size: cover;
   background-attachment: fixed;
   color: whitesmoke;
@@ -29,9 +30,9 @@ body {
   padding-bottom: 50px;
   background-image: linear-gradient(
     to top left,
-    #2da1a1 10%,
-    #208181 60%,
-    #ff2929 100%
+    #8be6e4 10%,
+    #006D6E 60%,
+    #c41a14 100%
   );
   border-radius: 9px;
 }
@@ -44,10 +45,7 @@ body {
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 
 }
-.userGuide {
-  font-size: 3vw;
-  padding-left: 50px;
-}
+
 
 .music-container {
   margin: 30px 50px 30px 50px;
@@ -56,9 +54,9 @@ body {
   padding-bottom: 50px;
   background-image: linear-gradient(
     to top left,
-    #2da1a1 10%,
-    #208181 60%,
-    #ff2929 100%
+    #8be6e4 10%,
+    #006D6E 60%,
+    #c41a14 100%
   );
   border-radius: 9px;
 }
@@ -102,6 +100,33 @@ iframe {
     color:  black;
     text-shadow: none;
   }
+
+  .workoutAdvice{
+    text-align: center;
+    font-size: 3vw;
+  }
+
+  .advice-title {
+    font-weight: bold;
+    font-size: 4vw;  
+  }
+  
+  .workout-btn{
+    font-size: 2vw;
+    border-radius: 58px;
+    padding: 18px;
+    background-color: rgb(255, 255, 255);
+    color: #2da1a1;
+    font-weight: bold;
+  }
+
+  .workout-btn:hover{
+    background-color: rgba(226, 226, 226, 0.884);
+    color: #196767;
+
+  }
+
+
 
 @media (max-width: 768px) {
   .workout-title {

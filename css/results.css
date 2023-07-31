@@ -31,7 +31,7 @@ body {
   background-image: linear-gradient(
     to top left,
     #8be6e4 10%,
-    #006D6E 60%,
+    #006d6e 60%,
     #c41a14 100%
   );
   border-radius: 9px;
@@ -41,11 +41,10 @@ body {
   /* text-align: left; */
   text-align: center;
   font-size: 4vw;
-  padding-top: 50px;
+  /* padding-top: 50px; */
+  margin-top: 90px;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-
 }
-
 
 .music-container {
   margin: 30px 50px 30px 50px;
@@ -55,7 +54,7 @@ body {
   background-image: linear-gradient(
     to top left,
     #8be6e4 10%,
-    #006D6E 60%,
+    #006d6e 60%,
     #c41a14 100%
   );
   border-radius: 9px;
@@ -90,43 +89,39 @@ iframe {
   margin: 20px;
 }
 
-.yourWorkout{
-    justify-content: space-around;
-    align-items: center;
-  
-  }
+.yourWorkout {
+  justify-content: space-around;
+  align-items: center;
+}
 
-  .modal-content{
-    color:  black;
-    text-shadow: none;
-  }
+.modal-content {
+  color: black;
+  text-shadow: none;
+}
 
-  .workoutAdvice{
-    text-align: center;
-    font-size: 3vw;
-  }
+.workoutAdvice {
+  text-align: center;
+  font-size: 3vw;
+}
 
-  .advice-title {
-    font-weight: bold;
-    font-size: 4vw;  
-  }
-  
-  .workout-btn{
-    font-size: 2vw;
-    border-radius: 58px;
-    padding: 18px;
-    background-color: rgb(255, 255, 255);
-    color: #2da1a1;
-    font-weight: bold;
-  }
+.advice-title {
+  font-weight: bold;
+  font-size: 4vw;
+}
 
-  .workout-btn:hover{
-    background-color: rgba(226, 226, 226, 0.884);
-    color: #196767;
+.workout-btn {
+  font-size: 2vw;
+  border-radius: 58px;
+  padding: 18px;
+  background-color: rgb(255, 255, 255);
+  color: #2da1a1;
+  font-weight: bold;
+}
 
-  }
-
-
+.workout-btn:hover {
+  background-color: rgba(226, 226, 226, 0.884);
+  color: #196767;
+}
 
 @media (max-width: 768px) {
   .workout-title {
@@ -175,3 +170,39 @@ iframe {
         height: 30vh;
     }
 } */
+#timer-title {
+  text-align: center;
+  font-size: 3vw;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+  margin-top: 90px;
+}
+#timer-container {
+  text-align: center;
+  padding: 15px;
+  margin: 30px 50px 30px 50px;
+  border-radius: 9px;
+
+  background-image: linear-gradient(
+    to top left,
+    #8be6e4 10%,
+    #006d6e 60%,
+    #c41a14 100%
+  );
+}
+#timeDisplay {
+  font-size: 4vw;
+}
+.timerBtn {
+  font-size: 2vw;
+  font-weight: bold;
+
+  border-radius: 58px;
+  padding: 18px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  transition: all 0.35s;
+}
+.timerBtn:hover {
+  background-color: rgba(226, 226, 226, 0.884);
+  color: #196767;
+}

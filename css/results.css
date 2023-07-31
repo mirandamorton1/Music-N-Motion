@@ -93,9 +93,15 @@ iframe {
 }
 
 .yourWorkout{
-    flex-direction: column;
     justify-content: space-around;
-}
+    align-items: center;
+  
+  }
+
+  .modal-content{
+    color:  black;
+    text-shadow: none;
+  }
 
 @media (max-width: 768px) {
   .workout-title {

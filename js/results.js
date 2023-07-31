@@ -1,5 +1,14 @@
 (async () => {
-  console.log(localStorage);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting){
+            entry.target.classList.add("show")
+        }
+    })
+})
+const hiddenElements = document.querySelectorAll(".hidden")
+hiddenElements.forEach((el) => observer.observe(el))
   const instructions = localStorage.getItem("instructions");
   const instructionDiv = document.querySelector(".workoutDiscr");
   instructionDiv.innerText += instructions;
@@ -20,7 +29,7 @@
   const iframe = document.querySelector("iframe");
 
   const token =
-    "BQCvneyXTtAiKzQD0vcxHItc5pwGk66y9InRCoY_zq6mjQI2Q69GiM-vOFvPMaBVEFxVAWhQxFOxrDax-1JudepIs2YjSwKdK_6pGSfLkTasl_tFvpHnAU_bcDrH9aj401eonY3igEdOb5mZwOQZ99Y7L8-X4ND04ie_jZRYK44UJvbdGDbGfhn3G8ROl5I9F_aSy6Rbk4qQ1VpY4de07lupF-qSwN0T3a02f_DP24Ctw86TmEI74YoU2n60pnn_-nyd5cJA_ezK8_67VnJcHzpg";
+    "BQBuIDSuKBJYyNSgPRj4RsYOVzn5O9ZgmsWGhPduv1hV8SL4so73bniRykn6Z1Pdtn5DDwGJOf3Cr2NXm-ZnFGosEIlSKSIORPci7e_WBzb8c8NxfRZVb12qVA2ykzUPmTHqO-L5mPvp0xNiNEzxIP5nuANqvBtr42JaZuUODtCen_Zu0I3nqhi-TqT62Bm0n9ywdx1R5OU01tdg0Jps6uADbXNikJ719kKP5IbQp3PFcdiQfSxFvqAKXipE4YKpSg3a3EKLu0LC0g_DevnrDLUj";
   async function fetchWebApi(endpoint, method, body) {
     const res = await fetch(`https://api.spotify.com/${endpoint}`, {
       headers: {

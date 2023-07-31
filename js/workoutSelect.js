@@ -7,11 +7,19 @@ function displayRadioValue() {
   const categoryHTML = document.querySelector("input[name=type]:checked");
   const levelHTML = document.querySelector("input[name=level]:checked");
 
-  category = categoryHTML.value;
-  level = levelHTML.value;
+  category = categoryHTML?.value;
+  level = levelHTML?.value;
+  if(!category && !level) {
+    alert('Please Make a Selction')
+  } else {
   localStorage.setItem("category", categoryHTML.value);
   localStorage.setItem("level", levelHTML.value);
   getExercise(category, level);
+  setTimeout(() => {
+    window.location.href = "results.html";
+  }, 1000);
+  console.log(category, level)
+  }
 }
 
 function getExercise(category, level) {
@@ -39,7 +47,4 @@ function getExercise(category, level) {
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   displayRadioValue();
-  setTimeout(() => {
-    window.location.href = "results.html";
-  }, 1000);
 });

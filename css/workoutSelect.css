@@ -11,14 +11,13 @@ body {
 }
 
 .hero2-image {
-    background-image: url("/assets/images/photo4.jpg");
+    background-image: url("/assets/images/photo12.png");
     height: 50vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    /* border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px; */
+
 }
 
 .bi {
@@ -36,9 +35,11 @@ body {
     color: white;
 }
 
-.title-text {
-    text-align: center;
-    color: blue
+.title {
+  position: relative;
+  font-size: 2.1vw;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
     
 } 
 

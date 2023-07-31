@@ -33,26 +33,28 @@
       <h2 class="results-title">Here's Your Plan!</h2>
 
     </div>
-    <h4 class="workout-title ">Your workout:</h4>
+    <h4 class="workout-title ">Your workout</h4>
     <div class="workout-container row">
       <div class="yourWorkout  d-flex">
           <div class="workoutAdvice ">
-              <p id="workout-name" class="userGuide">Workout Type: <br></p>
+              <p class="advice-title">Workout:</p>
+              <p id="workout-name" ></p>
           </div>
           <div class="workoutAdvice ">
-              <p id="equipment" class="userGuide">Equipment Needed: <br></p>
+            <p class="advice-title">Equipment:</p>
+              <p id="equipment"></p>
           </div>
       </div>
 
       
-      <div class="instruction-btn d-flex justify-content-center">
-        <button type="button" class="btn btn-info col-6" data-bs-toggle="modal" data-bs-target="#instructionsModal">
+      <div class="instruction-btn d-flex justify-content-center align-items-end">
+        <button type="button" class="btn workout-btn col-4" data-bs-toggle="modal" data-bs-target="#instructionsModal">
           Get workout instructions
         </button>
       </div>
       <!-- Modal -->
       <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="instructionsModalLabel">Instructions</h1>

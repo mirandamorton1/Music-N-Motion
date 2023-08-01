@@ -50,8 +50,10 @@ form {
   padding-left: 20px;
   padding-right: 20px;
   background-color: rgb(251, 243, 243);
+  box-shadow: rgba(0, 0, 0, 0.7) 7px 7px 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-
 
 .btn {
   display: flex;
@@ -62,20 +64,27 @@ form {
 }
 
 #submitButton {
-  background-color: rgb(10, 144, 227);
-  color: white;
+  background-color: #ddd;
   margin: auto;
+  padding: 10px 25px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  transition: all 0.35s;
 }
 
-label{
-    background-color: #0096C7 !important;
-    color: white !important;
+#submitButton:hover {
+  background-color: #979797;
+  color: white;
+}
+
+label {
+  background-color: #0096c7 !important;
+  color: white !important;
 }
 
 label:hover {
   background-color: white !important;
-  color: #0096C7 !important;
-  border: 1px solid #0096C7 !important;
+  color: #0096c7 !important;
+  border: 1px solid #0096c7 !important;
 }
 
 label:active {
@@ -85,12 +94,11 @@ label:active {
 /* .main{
     /* background-image: linear-gradient(to left, rgba(156, 14, 14, 0), rgb(51, 241, 235)); */
 
-
 .icons {
-    height: 40px; 
-    width: 40px;
-    border-radius: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
 }
 .icon-bg {
-    fill: #0096C7
+  fill: #0096c7;
 }

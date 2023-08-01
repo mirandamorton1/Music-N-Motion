@@ -1,14 +1,14 @@
 (async () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log(entry)
         if (entry.isIntersecting){
             entry.target.classList.add("show")
         }
     })
 })
-const hiddenElements = document.querySelectorAll(".hidden")
+const hiddenElements = document.querySelectorAll(".hidden-container")
 hiddenElements.forEach((el) => observer.observe(el))
+
   const instructions = localStorage.getItem("instructions");
   const instructionDiv = document.querySelector(".workoutDiscr");
   instructionDiv.innerText += instructions;
@@ -29,7 +29,7 @@ hiddenElements.forEach((el) => observer.observe(el))
   const iframe = document.querySelector("iframe");
 
   const token =
-    "BQCDYiLVuvyJ9YFwhh_PAiHyqTQ4dGPhifpunD9o5GbilEZNY2T1aE42W7AqFwt0Gd83cOIDnIguQu0W0LARBNqrmw1yZvA6UxJd5-EsKZAvC7d9Mbj4aMNRrZjeVW1FzxfNlT-vdZH409WhUv3qrXCQPKZAisOOs72xln_XnjrEYTceN2EYSj5MLykHRaUeEml7WvqZHL83T1CGW7aGA7h4KHBw8cDI8QQCkfcNplO5FtFSjB_tHqlEoNEcHMhgvsvhwhI6j7fZ6vUqySKmxeAuj";
+    "BQBVx8Md6_wGoNBirPqLvfy9_p1PzhASXwoYBnk_bW1aVLkg5FkQDKg-60MYmmIWT93vjtLdRyg4W7nqE9S0eT897ypsHtvrYWUd13chKJzXYwdjJ5g0qyDv5sKiTIKpLm_ssbQQSVLzfJp8pobAUqvnZjcsSR5vRXtUtkucgvdjGaXLUxTA2ii9TpQahrFT3t4ZhraqdQpeGQp-tiQcusPjVaGXpnikFlO-co07h1maAXuBtxHTopvQSeYt-5UQiEEzsYx-pfFwnVGITXfzwGFM";
   async function fetchWebApi(endpoint, method, body) {
     const res = await fetch(`https://api.spotify.com/${endpoint}`, {
       headers: {

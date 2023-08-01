@@ -4,7 +4,7 @@ body {
 }
 
 .hero-img-results {
-  background-image: url("/assets/images/photo15.png");
+  background-image: url("/assets/images/resultsheader.png");
   height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,8 +25,9 @@ body {
 
 .res-container{
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-  margin: 30px 50px 30px 50px;
-  height: 50vh;
+  /* margin: 30px 50px 30px 50px; */
+  /* height: 25vh; */
+  /* width: 40vw; */
   padding: 15px;
   padding-bottom: 50px;
   background-image: linear-gradient(to left top, #0077b6, #0083be, #008ec5, #009acb, #00a5d1, #1faed5, #31b6d9, #41bfdd, #59c7e1, #6dd0e6, #7fd8ea, #90e0ef); 
@@ -79,12 +80,12 @@ iframe {
 
 .workoutAdvice {
   text-align: center;
-  font-size: 3vw;
+  font-size: 2vw;
 }
 
 .advice-title {
   font-weight: bold;
-  font-size: 4vw;
+  font-size: 2.5vw;
 }
 
 .workout-btn {
@@ -93,7 +94,7 @@ iframe {
   margin: 10px;
   outline: 0;
   display: inline-block;
-  padding: 15px 25px;
+  /* padding: 15px 25px; */
   color: black;
   background-color: #ffffff;
   text-align: center;
@@ -118,10 +119,7 @@ iframe {
   }
 }
 
-#timer-container {
-  text-align: center;
-  max-height: 25vh;
-}
+
 
 #timeDisplay {
   font-size: 5vw;
@@ -142,6 +140,35 @@ iframe {
   background-color: #979797;
   color: #ffffff;
 }
+
+.top-row{
+  display: flex;
+  justify-content: space-around;
+}
+
+.workout-rec{
+  width: 40vw;
+}
+
+.timer{
+  width: 40vw;
+}
+
+.workout-container{
+  
+  height: 25vw;
+
+}
+
+#timer-container {
+  text-align: center;
+  height: 25vh;
+}
+
+.music-container{
+  margin-bottom: 50px;
+}
+
 
 /* .hidden-container{
   opacity: 0;

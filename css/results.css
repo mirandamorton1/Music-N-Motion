@@ -15,6 +15,7 @@ p{
   margin-bottom: .5rem;
 }
 
+
 .hero-img-results {
   background-image: url("/assets/images/resultsheader.png");
   height: 50vh;
@@ -83,8 +84,10 @@ p{
 }
 
 iframe {
-  /* min-height: 300px; */
-  border-radius: 5px;
+    height: 45vh;
+    border-radius: 5px;
+    padding: 23px;
+    padding-bottom: 0px;
 }
 
 .bi {
@@ -183,6 +186,7 @@ iframe {
 #timer-container {
   text-align: center;
   height: 25.5vw;
+  padding-top: 20px;
 }
 
 .music-container {
@@ -198,6 +202,22 @@ iframe {
     font-size: 1vw;
   }
   }
+    
+  @media screen and (max-height: 676px)  {
+    iframe {
+        height: 337px;
+      }
+      
+    }
+    
+
+
+
+
+
+
+
+
 
 
 /* .hidden-container{

@@ -2,9 +2,12 @@ body {
   height: 100%;
   margin: 0;
   background-image: linear-gradient(
-    to right,
-    rgba(251, 243, 243, 0),
-    rgb(206, 229, 249)
+    to right bottom,
+    #90e0ef,
+    #a0e4f1,
+    #aee8f4,
+    #bcecf6,
+    #caf0f8
   );
   background-size: cover;
   background-attachment: fixed;
@@ -40,9 +43,9 @@ input[type="radio"]:checked + label .fa-hover-show {
     display: inline-block !important;
   }
 
-  input[type="radio"]:checked + label .fa-hover-hidden {
+input[type="radio"]:checked + label .fa-hover-hidden {
     display: none !important;
-  }
+}
 
 .hero2-text {
   text-align: center;
@@ -92,8 +95,10 @@ form {
 }
 
 label {
-  background-color: #0096c7 !important;
+  background-color: #41bfdd !important;
   color: white !important;
+  font-size: 20px !important;
+  font-family: "Roboto", sans-serif !important;
 }
 
 label:hover {
@@ -121,5 +126,6 @@ input[type="radio"]:checked+label {
   border-radius: 10px;
 }
 .icon-bg {
-  fill: #0096c7;
+  fill: #41bfdd;
 }
+

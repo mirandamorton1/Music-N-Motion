@@ -1,79 +1,56 @@
 body {
-  /* background-image: linear-gradient(
-    to top left,
-    #196767 10%,
-    #196767 50%,
-    #ff4f4f 90%
-  ); */
-  background-color: #208181;
-  background-size: cover;
-  background-attachment: fixed;
+  background-image: linear-gradient(to left bottom, #76b5fd, #a8c5fe, #cdd6fe, #e9eafe, #ffffff);  background-attachment: fixed;
   color: whitesmoke;
-}
-
-.results-title {
-  text-align: center;
-  padding: 15vw;
-  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
-}
-
-.workout-container {
-  padding: 15px;
-  margin: 20px;
-  border-radius: 9px;
-  height: 40vh;
-  text-align: left;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-  margin: 30px 50px 30px 50px;
-  height: 50vh;
-  padding: 15px;
-  padding-bottom: 50px;
-  background-image: linear-gradient(
-    to top left,
-    #8be6e4 10%,
-    #006d6e 60%,
-    #c41a14 100%
-  );
-  border-radius: 9px;
-}
-
-.workout-title {
-  /* text-align: left; */
-  text-align: center;
-  font-size: 4vw;
-  /* padding-top: 50px; */
-  margin-top: 90px;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-}
-
-.music-container {
-  margin: 30px 50px 30px 50px;
-  height: 50vh;
-  padding: 15px;
-  padding-bottom: 50px;
-  background-image: linear-gradient(
-    to top left,
-    #8be6e4 10%,
-    #006d6e 60%,
-    #c41a14 100%
-  );
-  border-radius: 9px;
-}
-
-h2 {
-  font-size: 9vw;
 }
 
 .hero-img-results {
   background-image: url("/assets/images/photo15.png");
-  /* height: 65vh; */
+  height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  /* width: 100%; */
+  background-position: bottom 25% right 0%;
 }
 
+.results-title {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.res-container{
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+  margin: 30px 50px 30px 50px;
+  height: 50vh;
+  padding: 15px;
+  padding-bottom: 50px;
+  background-image: linear-gradient(to left bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8f9de6, #83a0ea, #75a3ed, #669ff2, #559cf6, #3d98fb, #0b95ff);
+  box-shadow: 10px 10px 15px rgb(0, 0, 0);
+  border-radius: 9px;
+}
+
+
+.workout-title {
+  text-align: center;
+  font-size: 4vw;
+  margin-top: 90px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+
 .music-title {
+  text-align: center;
+  font-size: 3vw;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+  margin-top: 90px;
+}
+
+#timer-title {
   text-align: center;
   font-size: 3vw;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
@@ -110,19 +87,25 @@ iframe {
 }
 
 .workout-btn {
-  font-size: 2vw;
-  border-radius: 58px;
-  padding: 18px;
-  background-color: rgb(255, 255, 255);
-  color: #2da1a1;
-  font-weight: bold;
+  font-size: 1.7vw;
+  border: none;
+  margin: 10px;
+  outline: 0;
+  display: inline-block;
+  padding: 20px 25px;
+  color: black;
+  background-color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  transition: all 0.35s;
 }
 
 .workout-btn:hover {
-  background-color: rgba(226, 226, 226, 0.884);
-  color: #196767;
+  background-color: #54b4d3;
+  /* transition: background-color 0.35s; */
+  color: white;
 }
-
 
 
 @media (max-width: 768px) {
@@ -133,83 +116,32 @@ iframe {
     font-size: 15px;
   }
 }
-/* @media screen and (min-height: 833px) and (max-width: 770px) {
-  iframe {
-    max-height: 334px
-    }
-  }
 
-  
-  
-  @media screen and (max-height: 915px)  {
-    .music-container {
-        height: 40vh;
-      }
-      
-    }
-    
-    @media screen and (min-height: 770px) and (max-width: 550px) {
-      .music-container {
-        height: 30vh;
-    }
-    
-}
-
-@media screen and (min-height: 700px) and (max-width: 770px) {
-  .music-container {
-    height: 37vh;
-  }
-}
-
-@media screen and (min-width: 640px), (min-height: 700px){
-  .music-title {
-    font-size: 20px;
-  }
-}
-
-@media screen and (min-height: 770px) and (max-width: 768px) {
-  .music-container {
-    height: 30vh;
-    }
-} */
-#timer-title {
-  text-align: center;
-  font-size: 3vw;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-  margin-top: 90px;
-}
 #timer-container {
   text-align: center;
-  padding: 15px;
-  margin: 30px 50px 30px 50px;
-  border-radius: 9px;
-  
-  background-image: linear-gradient(
-    to top left,
-    #8be6e4 10%,
-    #006d6e 60%,
-    #c41a14 100%
-    );
-  }
-  #timeDisplay {
-  font-size: 4vw;
+  max-height: 25vh;
 }
-.timerBtn {
-  font-size: 2vw;
-  font-weight: bold;
 
-  border-radius: 58px;
-  padding: 18px;
+#timeDisplay {
+  font-size: 5vw;
+}
+
+.timerBtn {
+  font-size: 2.5vw;
+  border: none;
+  padding: 1.5vw;
   background-color: rgb(255, 255, 255);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
   transition: all 0.35s;
-}
-.timerBtn:hover {
-  background-color: rgba(226, 226, 226, 0.884);
-  color: #196767;
+  margin: 5px;
 }
 
-.hidden{
+.timerBtn:hover {
+  background-color: rgba(255, 255, 255, 0.877);
+  color: #54b4d3;
+}
+
+/* .hidden-container{
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-50%);
@@ -221,4 +153,46 @@ iframe {
   filter: blur(0);
   transform: translateX(0);
 
-}
+} */
+
+
+
+  /* @media screen and (min-height: 833px) and (max-width: 770px) {
+    iframe {
+      max-height: 334px
+      }
+    }
+  
+    
+    
+    @media screen and (max-height: 915px)  {
+      .music-container {
+          height: 40vh;
+        }
+        
+      }
+      
+      @media screen and (min-height: 770px) and (max-width: 550px) {
+        .music-container {
+          height: 30vh;
+      }
+      
+  }
+  
+  @media screen and (min-height: 700px) and (max-width: 770px) {
+    .music-container {
+      height: 37vh;
+    }
+  }
+  
+  @media screen and (min-width: 640px), (min-height: 700px){
+    .music-title {
+      font-size: 20px;
+    }
+  }
+  
+  @media screen and (min-height: 770px) and (max-width: 768px) {
+    .music-container {
+      height: 30vh;
+      }
+  } */

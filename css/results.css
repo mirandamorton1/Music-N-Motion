@@ -31,7 +31,7 @@ body {
   padding-bottom: 50px;
   background-image: linear-gradient(to left top, #0077b6, #0083be, #008ec5, #009acb, #00a5d1, #1faed5, #31b6d9, #41bfdd, #59c7e1, #6dd0e6, #7fd8ea, #90e0ef); 
   border-radius: 9px;
-  box-shadow: black 10px 10px 15px;
+  box-shadow: rgba(0, 0, 0, 0.7) 7px 7px 10px;
 }
 
 
@@ -88,12 +88,12 @@ iframe {
 }
 
 .workout-btn {
-  font-size: 1.7vw;
+  font-size: 1.6vw;
   border: none;
   margin: 10px;
   outline: 0;
   display: inline-block;
-  padding: 20px 25px;
+  padding: 15px 25px;
   color: black;
   background-color: #ffffff;
   text-align: center;
@@ -103,9 +103,9 @@ iframe {
 }
 
 .workout-btn:hover {
-  background-color: #555;
+  background-color: #979797;
   /* transition: background-color 0.35s; */
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 
@@ -132,13 +132,14 @@ iframe {
   border: none;
   padding: 1.5vw;
   background-color: rgb(255, 255, 255);
+  color: black;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
   transition: all 0.35s;
   margin: 5px;
 }
 
 .timerBtn:hover {
-  background-color: #555;
+  background-color: #979797;
   color: #ffffff;
 }
 

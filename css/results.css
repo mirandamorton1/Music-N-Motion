@@ -1,6 +1,6 @@
 body {
-  background-image: linear-gradient(to left bottom, #76b5fd, #a8c5fe, #cdd6fe, #e9eafe, #ffffff);  background-attachment: fixed;
-  color: whitesmoke;
+  background-image: linear-gradient(to right bottom, #90e0ef, #a0e4f1, #aee8f4, #bcecf6, #caf0f8);   color: whitesmoke;
+   /* background-color: white; */
 }
 
 .hero-img-results {
@@ -29,15 +29,15 @@ body {
   height: 50vh;
   padding: 15px;
   padding-bottom: 50px;
-  background-image: linear-gradient(to left bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8f9de6, #83a0ea, #75a3ed, #669ff2, #559cf6, #3d98fb, #0b95ff);
-  box-shadow: 10px 10px 15px rgb(0, 0, 0);
+  background-image: linear-gradient(to left top, #0077b6, #0083be, #008ec5, #009acb, #00a5d1, #1faed5, #31b6d9, #41bfdd, #59c7e1, #6dd0e6, #7fd8ea, #90e0ef); 
   border-radius: 9px;
+  box-shadow: black 10px 10px 15px;
 }
 
 
 .workout-title {
   text-align: center;
-  font-size: 4vw;
+  font-size: 4.5vw;
   margin-top: 90px;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
@@ -45,14 +45,14 @@ body {
 
 .music-title {
   text-align: center;
-  font-size: 3vw;
+  font-size: 4vw;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
   margin-top: 90px;
 }
 
 #timer-title {
   text-align: center;
-  font-size: 3vw;
+  font-size: 4vw;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
   margin-top: 90px;
 }
@@ -64,6 +64,7 @@ iframe {
 
 .bi {
   margin: 20px;
+  color: whitesmoke;
 }
 
 .yourWorkout {
@@ -102,7 +103,7 @@ iframe {
 }
 
 .workout-btn:hover {
-  background-color: #54b4d3;
+  background-color: #555;
   /* transition: background-color 0.35s; */
   color: white;
 }
@@ -137,8 +138,8 @@ iframe {
 }
 
 .timerBtn:hover {
-  background-color: rgba(255, 255, 255, 0.877);
-  color: #54b4d3;
+  background-color: #555;
+  color: #ffffff;
 }
 
 /* .hidden-container{

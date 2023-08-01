@@ -1,6 +1,14 @@
 body {
-  background-image: linear-gradient(to right bottom, #90e0ef, #a0e4f1, #aee8f4, #bcecf6, #caf0f8);   color: whitesmoke;
-   /* background-color: white; */
+  background-image: linear-gradient(
+    to right bottom,
+    #90e0ef,
+    #a0e4f1,
+    #aee8f4,
+    #bcecf6,
+    #caf0f8
+  );
+  color: whitesmoke;
+  /* background-color: white; */
 }
 
 .hero-img-results {
@@ -20,21 +28,34 @@ body {
   transform: translate(-50%, -50%);
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
   font-size: 50px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-.res-container{
+.res-container {
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
   /* margin: 30px 50px 30px 50px; */
   /* height: 25vh; */
   /* width: 40vw; */
   padding: 15px;
   padding-bottom: 50px;
-  background-image: linear-gradient(to left top, #0077b6, #0083be, #008ec5, #009acb, #00a5d1, #1faed5, #31b6d9, #41bfdd, #59c7e1, #6dd0e6, #7fd8ea, #90e0ef); 
+  background-image: linear-gradient(
+    to left top,
+    #0077b6,
+    #0083be,
+    #008ec5,
+    #009acb,
+    #00a5d1,
+    #1faed5,
+    #31b6d9,
+    #41bfdd,
+    #59c7e1,
+    #6dd0e6,
+    #7fd8ea,
+    #90e0ef
+  );
   border-radius: 9px;
   box-shadow: rgba(0, 0, 0, 0.7) 7px 7px 10px;
 }
-
 
 .workout-title {
   text-align: center;
@@ -42,7 +63,6 @@ body {
   margin-top: 90px;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
-
 
 .music-title {
   text-align: center;
@@ -53,7 +73,7 @@ body {
 
 #timer-title {
   text-align: center;
-  font-size: 4vw;
+  font-size: 4.5vw;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
   margin-top: 90px;
 }
@@ -109,7 +129,6 @@ iframe {
   color: rgb(255, 255, 255);
 }
 
-
 @media (max-width: 768px) {
   .workout-title {
     font-size: 20px;
@@ -118,8 +137,6 @@ iframe {
     font-size: 15px;
   }
 }
-
-
 
 #timeDisplay {
   font-size: 5vw;
@@ -141,34 +158,31 @@ iframe {
   color: #ffffff;
 }
 
-.top-row{
+.top-row {
   display: flex;
   justify-content: space-around;
 }
 
-.workout-rec{
+.workout-rec {
   width: 40vw;
 }
 
-.timer{
+.timer {
   width: 40vw;
 }
 
-.workout-container{
-  
+.workout-container {
   height: 25vw;
-
 }
 
 #timer-container {
   text-align: center;
-  height: 25vh;
+  height: 25.5vw;
 }
 
-.music-container{
+.music-container {
   margin-bottom: 50px;
 }
-
 
 /* .hidden-container{
   opacity: 0;
@@ -184,9 +198,7 @@ iframe {
 
 } */
 
-
-
-  /* @media screen and (min-height: 833px) and (max-width: 770px) {
+/* @media screen and (min-height: 833px) and (max-width: 770px) {
     iframe {
       max-height: 334px
       }

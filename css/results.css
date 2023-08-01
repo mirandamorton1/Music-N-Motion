@@ -11,6 +11,10 @@ body {
   /* background-color: white; */
 }
 
+p{
+  margin-bottom: .5rem;
+}
+
 .hero-img-results {
   background-image: url("/assets/images/resultsheader.png");
   height: 50vh;
@@ -111,7 +115,7 @@ iframe {
 .workout-btn {
   font-size: 1.6vw;
   border: none;
-  margin: 10px;
+  /* margin: 10px; */
   outline: 0;
   display: inline-block;
   /* padding: 15px 25px; */
@@ -161,6 +165,7 @@ iframe {
 .top-row {
   display: flex;
   justify-content: space-around;
+  align-items: flex-end;
 }
 
 .workout-rec {
@@ -181,8 +186,19 @@ iframe {
 }
 
 .music-container {
-  margin-bottom: 50px;
+  margin: 0px 40px 50px 40px;
 }
+
+
+@media screen and (max-width: 560px) {
+  .advice-title {
+    font-size: 1.5vw;
+    }
+  #workout-name{
+    font-size: 1vw;
+  }
+  }
+
 
 /* .hidden-container{
   opacity: 0;

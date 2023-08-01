@@ -29,7 +29,7 @@ hiddenElements.forEach((el) => observer.observe(el))
   const iframe = document.querySelector("iframe");
 
   const token =
-    "BQBLCGVtoe-InrfS5ilmQ8dQFNTr6egPM05GVWzJEMmBWkZokCP-FVdwy1YK_9SzI0PBmMo8_d8S5LSLhrESHvtNb-dzhw5WJsO72yKmIb2bsuhyZMp_o6Id6NwXDl0Kp34OfsGOFfkzJiL7NqVt8py1LrXzsQTUBEoAL3hEAxJ46TCPW-DKVlBBj2NgEVI4gStd9yQql-S0a0JoGoDYDtS2tZw1jABY7LGFAoYwGgINy5oYhaMopoGVw0kfcfj8N0CptOlHuBpuVKUd_q-m7dn9";
+    "BQBXKir2htF1mxzx1UcIBUe34hh2ZgdoPGQkXnSz_Tunsi6kcdpbLderK3n5CddH_0O1n1DT94BPTmkCE4dWizXIAilECG7WjdfvHTPt7DPUrypCPwlR3hFTO3aZLtYldowcjUkysmwMUl-Lkmi3QVY9eKGYY571uBU5fOiYSPobnR0o2VJ0D-Xy6LJIymWb4wK43iO9YvuAHcDLW3LSxI8LoD5aBeSRSEAXKX_5zgqxnUNgcGjhrM6HUnMlboy9wERET29T12OiMpUWsngNvX9f";
   async function fetchWebApi(endpoint, method, body) {
     const res = await fetch(`https://api.spotify.com/${endpoint}`, {
       headers: {

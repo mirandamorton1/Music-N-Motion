@@ -105,6 +105,7 @@ class StopWatch {
     this.hrs = 0;
     this.mins = 0;
     this.secs = 0;
+    
     this.paused = true;
   }
 

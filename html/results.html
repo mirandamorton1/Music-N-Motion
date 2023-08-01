@@ -9,7 +9,16 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/results.css" />
     <title>Results</title>
   </head>
@@ -35,86 +44,88 @@
     </div>
     <div class="top-row">
       <div class="workout-rec">
-          <h4 class="workout-title">Your workout</h4>
-            <div class="workout-container res-container hidden-container row">
-              <div class="yourWorkout d-flex">
-                <div class="workoutAdvice">
-                  <p class="advice-title">Workout:</p>
-                  <p id="workout-name"></p>
-                </div>
-                <div class="workoutAdvice">
-                  <p class="advice-title">Equipment:</p>
-                  <p id="equipment"></p>
-                </div>
-              </div>
-        
-              <div class="instruction-btn d-flex justify-content-center align-items-center">
-                <button
-                  type="button"
-                  class="btn workout-btn col-4"
-                  data-bs-toggle="modal"
-                  data-bs-target="#instructionsModal"
-                >
-                  Workout Details
-                </button>
-              </div>
-              <!-- Modal -->
-              <div
-                class="modal fade"
-                id="instructionsModal"
-                tabindex="-1"
-                aria-labelledby="instructionsModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog modal-dialog-scrollable">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="instructionsModalLabel">
-                        Instructions
-                      </h1>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="workoutDiscr">
-                        <p></p>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                    </div>
-                  </div> 
-                </div>
-              </div>
+        <h4 class="workout-title">Your workout</h4>
+        <div class="workout-container res-container hidden-container row">
+          <div class="yourWorkout d-flex">
+            <div class="workoutAdvice">
+              <p class="advice-title">Workout:</p>
+              <p id="workout-name"></p>
             </div>
-      </div>
-        <div class="timer">
-          <h4 id="timer-title">Workout Timer</h4>
-          <div id="timer-container" class = "res-container d-flex flex-column justify-content-center">
-            <div id="timeDisplay">00:00:00</div>
-            <div class="d-flex flex-row justify-content-center">
-              <button id="startBtn" class="timerBtn btn fa ">&#xf04b</button>
-              <button id="pauseBtn" class="timerBtn btn fa">&#xf04c</button>
-              <button id="resetBtn" class="timerBtn btn fa">&#xf021</button>
+            <div class="workoutAdvice">
+              <p class="advice-title">Equipment:</p>
+              <p id="equipment"></p>
+            </div>
+          </div>
+
+          <div
+            class="instruction-btn d-flex justify-content-center align-items-center"
+          >
+            <button
+              type="button"
+              class="btn workout-btn col-4"
+              data-bs-toggle="modal"
+              data-bs-target="#instructionsModal"
+            >
+              Workout Details
+            </button>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="instructionsModal"
+            tabindex="-1"
+            aria-labelledby="instructionsModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="instructionsModalLabel">
+                    Instructions
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="workoutDiscr">
+                    <p></p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="timer">
+        <h4 id="timer-title">Workout Timer</h4>
+        <div
+          id="timer-container"
+          class="res-container d-flex flex-column justify-content-center"
+        >
+          <div id="timeDisplay">00:00.00</div>
+          <div class="d-flex flex-row justify-content-center">
+            <button id="startBtn" class="timerBtn btn fa">&#xf04b;</button>
+            <button id="pauseBtn" class="timerBtn btn fa">&#xf04c;</button>
+            <button id="resetBtn" class="timerBtn btn fa">&#xf021;</button>
+          </div>
+        </div>
       </div>
-    
-    <h4 class="music-title">
-      Recomended Spotify playlist
-    </h4>
+    </div>
+
+    <h4 class="music-title">Recomended Spotify playlist</h4>
     <div class="music-container res-container hidden-container">
       <iframe
         title="Spotify Embed: Recommendation Playlist"
@@ -124,7 +135,12 @@
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       ></iframe>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="/js/results.js"></script>
   </body>

@@ -1,13 +1,13 @@
 (async () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        if (entry.isIntersecting){
-            entry.target.classList.add("show")
-        }
-    })
-})
-const hiddenElements = document.querySelectorAll(".hidden-container")
-hiddenElements.forEach((el) => observer.observe(el))
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  const hiddenElements = document.querySelectorAll(".hidden-container");
+  hiddenElements.forEach((el) => observer.observe(el));
 
   const instructions = localStorage.getItem("instructions");
   const instructionDiv = document.querySelector(".workoutDiscr");
@@ -102,10 +102,9 @@ class StopWatch {
     this.startTime = 0;
     this.elapsedTime = 0;
     this.intervalId = null;
-    this.hrs = 0;
     this.mins = 0;
     this.secs = 0;
-    
+
     this.paused = true;
   }
 
@@ -130,7 +129,6 @@ class StopWatch {
     this.paused = true;
     this.elapsedTime = 0;
     this.startTime = 0;
-    this.hrs = 0;
     this.mins = 0;
     this.secs = 0;
     this.updateDisplay();
@@ -140,16 +138,18 @@ class StopWatch {
     this.elapsedTime = Date.now() - this.startTime;
     this.secs = Math.floor((this.elapsedTime / 1000) % 60);
     this.mins = Math.floor((this.elapsedTime / (1000 * 60)) % 60);
-    this.hrs = Math.floor((this.elapsedTime / (1000 * 60 * 60)) % 60);
     this.updateDisplay();
   }
 
   updateDisplay() {
+    this.elapsedTime = (this.elapsedTime % 1000)
+      .toString()
+      .padStart(3, "0")
+      .slice(0, 2);
     this.secs = this.pad(this.secs);
     this.mins = this.pad(this.mins);
-    this.hrs = this.pad(this.hrs);
     const timeDisplay = document.querySelector("#timeDisplay");
-    timeDisplay.textContent = `${this.hrs}:${this.mins}:${this.secs}`;
+    timeDisplay.innerHTML = `${this.mins}:${this.secs}.${this.elapsedTime}`;
   }
 
   pad(unit) {

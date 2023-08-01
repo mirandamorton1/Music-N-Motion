@@ -11,10 +11,9 @@ body {
   /* background-color: white; */
 }
 
-p{
-  margin-bottom: .5rem;
+p {
+  margin-bottom: 0.5rem;
 }
-
 
 .hero-img-results {
   background-image: url("/assets/images/resultsheader.png");
@@ -84,10 +83,10 @@ p{
 }
 
 iframe {
-    height: 45vh;
-    border-radius: 5px;
-    padding: 23px;
-    padding-bottom: 0px;
+  height: 45vh;
+  border-radius: 5px;
+  padding: 23px;
+  padding-bottom: 0px;
 }
 
 .bi {
@@ -147,6 +146,7 @@ iframe {
 
 #timeDisplay {
   font-size: 5vw;
+  font-family: "Roboto Mono", monospace;
 }
 
 .timerBtn {
@@ -193,32 +193,20 @@ iframe {
   margin: 0px 40px 50px 40px;
 }
 
-
 @media screen and (max-width: 560px) {
   .advice-title {
     font-size: 1.5vw;
-    }
-  #workout-name{
+  }
+  #workout-name {
     font-size: 1vw;
   }
+}
+
+@media screen and (max-height: 676px) {
+  iframe {
+    height: 337px;
   }
-    
-  @media screen and (max-height: 676px)  {
-    iframe {
-        height: 337px;
-      }
-      
-    }
-    
-
-
-
-
-
-
-
-
-
+}
 
 /* .hidden-container{
   opacity: 0;

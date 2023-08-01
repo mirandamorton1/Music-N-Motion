@@ -52,36 +52,6 @@ form {
   background-color: rgb(251, 243, 243);
 }
 
-section {
-  flex: 1 1 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cards {
-  display: flex;
-}
-
-.card {
-  position: relative;
-  width: 17rem;
-  height: 17rem;
-  margin: 0.5rem;
-  border: 1px solid #eee;
-  border-radius: 1rem;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: 100%;
-  overflow: hidden;
-  cursor: pointer;
-  transition: background-size 0.4s;
-}
-
-.card.loan-business,
-.card.loan-business::before {
-  background-image: url("/assets/images/photo2.jpg");
-}
 
 .btn {
   display: flex;
@@ -97,9 +67,15 @@ section {
   margin: auto;
 }
 
+label{
+    background-color: #0096C7 !important;
+    color: white !important;
+}
+
 label:hover {
-  background-color: rgb(10, 144, 227) !important;
-  color: white !important;
+  background-color: white !important;
+  color: #0096C7 !important;
+  border: 1px solid #0096C7 !important;
 }
 
 label:active {
@@ -116,5 +92,5 @@ label:active {
     border-radius: 10px;
 }
 .icon-bg {
-    fill: #e32b16
+    fill: #0096C7
 }

@@ -10,7 +10,11 @@ function displayRadioValue() {
   level = levelHTML?.value;
   if(!category && !level) {
     alert('Please Make a Selction')
-  } else {
+  } else if(!category) {
+    alert('Please Select Type of Exercise')
+  } else if(!level) {
+    alert('Please Select Level Of Difficulty')
+  } else  {
   localStorage.setItem("category", categoryHTML.value);
   localStorage.setItem("level", levelHTML.value);
   getExercise(category, level);
@@ -20,10 +24,6 @@ function displayRadioValue() {
   console.log(category, level)
   }
 }
-
-// function myFunction() {
-//   document.getElementById('form-1').style.display='none';document.getElementById('form-2').style.display = 'block';
-// }
 
 function getExercise(category, level) {
   fetch(

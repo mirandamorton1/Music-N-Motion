@@ -9,6 +9,7 @@ body {
   );
   color: whitesmoke;
   /* background-color: white; */
+  font-family: "roboto", sans-serif;
 }
 
 p {
@@ -61,25 +62,15 @@ p {
   box-shadow: rgba(0, 0, 0, 0.2) 7px 7px 20px;
 }
 
-.workout-title {
+.title {
   text-align: center;
   font-size: 4.5vw;
-  margin-top: 90px;
+  margin-top: 8vh;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
 
 .music-title {
-  text-align: center;
   font-size: 4vw;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-  margin-top: 90px;
-}
-
-#timer-title {
-  text-align: center;
-  font-size: 4.5vw;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-  margin-top: 90px;
 }
 
 iframe {
@@ -120,7 +111,7 @@ iframe {
   /* margin: 10px; */
   outline: 0;
   display: inline-block;
-  /* padding: 15px 25px; */
+  padding: 5px;
   color: black;
   background-color: #ffffff;
   text-align: center;
@@ -135,14 +126,6 @@ iframe {
   color: rgb(255, 255, 255);
 }
 
-@media (max-width: 768px) {
-  .workout-title {
-    font-size: 20px;
-  }
-  .userGuide {
-    font-size: 15px;
-  }
-}
 
 #timeDisplay {
   font-size: 5vw;
@@ -193,6 +176,15 @@ iframe {
   margin: 0px 40px 50px 40px;
 }
 
+@media (max-width: 768px) {
+  .workout-title {
+    font-size: 20px;
+  }
+  .userGuide {
+    font-size: 15px;
+  }
+}
+
 @media screen and (max-width: 560px) {
   .advice-title {
     font-size: 1.5vw;
@@ -208,6 +200,32 @@ iframe {
   }
 }
 
+@media screen and (max-height: 833px) {
+  iframe {
+    height: 377px;
+  }
+}
+
+
+@media screen and (max-width: 370px) {
+  .workout-container {
+    height: 26.5vw;
+  }
+  #timer-container {
+    height: 27vw;
+  }
+}
+
+
+
+/* iframe {
+
+}
+
+ */
+
+
+
 /* .hidden-container{
   opacity: 0;
   filter: blur(5px);
@@ -222,42 +240,3 @@ iframe {
 
 } */
 
-/* @media screen and (min-height: 833px) and (max-width: 770px) {
-    iframe {
-      max-height: 334px
-      }
-    }
-  
-    
-    
-    @media screen and (max-height: 915px)  {
-      .music-container {
-          height: 40vh;
-        }
-        
-      }
-      
-      @media screen and (min-height: 770px) and (max-width: 550px) {
-        .music-container {
-          height: 30vh;
-      }
-      
-  }
-  
-  @media screen and (min-height: 700px) and (max-width: 770px) {
-    .music-container {
-      height: 37vh;
-    }
-  }
-  
-  @media screen and (min-width: 640px), (min-height: 700px){
-    .music-title {
-      font-size: 20px;
-    }
-  }
-  
-  @media screen and (min-height: 770px) and (max-width: 768px) {
-    .music-container {
-      height: 30vh;
-      }
-  } */

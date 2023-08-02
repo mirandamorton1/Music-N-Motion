@@ -87,7 +87,6 @@ iframe {
 
 .yourWorkout {
   justify-content: space-around;
-  align-items: center;
 }
 
 .modal-content {
@@ -217,14 +216,16 @@ iframe {
 }
 
 
-
-/* iframe {
-
+@media screen and (max-width: 280px) {
+  .music-container {
+    margin: 0px 40px 50px 25px;
+    width: 102%; /* Adjust this value to set the initial width of the iframe */
+    height: 110%; /* Adjust this value to set the initial height of the iframe */
+    transform-origin: top left;
+    transform: scale(.8)
+  }
 }
-
- */
-
-
+ 
 
 /* .hidden-container{
   opacity: 0;

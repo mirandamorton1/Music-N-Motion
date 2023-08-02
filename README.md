@@ -30,7 +30,7 @@
   
 `This project is licensed under MIT`
   ### Tests:
-  To test this app, open the file in VS Code, open the terminal and view in live server. `node index.js`. Answer the questions to see the workout and playlist generated. 
+  To test this app, open the file in VS Code, open the terminal and view in live server. Click the start button and answer the questions to see the workout and playlist generated. 
   ### Technology Used:
   - HTML
   - CSS
@@ -53,4 +53,5 @@
   - miranda.morton1@gmail.com
   - nathan.manwarring@precisionplanting.com
   - meisosk@gmail.com
-  #This project: https://github.com/mirandamorton1/Music-N-Motion
+
+This project: https://github.com/mirandamorton1/Music-N-Motion

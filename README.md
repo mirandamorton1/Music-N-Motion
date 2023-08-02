@@ -5,8 +5,6 @@
   ## Description
   This app will generate a custom playlist based off of the type of workout and intensity you choose. Answer the questions and submit the form to see your workout plan!
 
-Screenshots will go here:
-
 
   ## Table of Contents
   * [Description](#description)
@@ -40,16 +38,17 @@ Screenshots will go here:
   ### Contributors: 
   To contribute to this project, clone this repo locally and commit your code on a separate branch. 
   #### Contributors:
-  Nathan Manwarring
-  Miranda Morton
-  Meir Soskil
+  - Nathan Manwarring
+  - Miranda Morton
+  - Meir Soskil
   ### Questions:
-  If you have any questions regarding this app, feel free to contact me: 
+  If you have any questions regarding this app, feel free to contact us: 
   #### GitHub: 
-  https://github.com/mirandamorton1
-  https://github.com/nmanwarring
-  https://github.com/Meisosk 
-  #### Email: miranda.morton1@gmail.com
-  nathan.manwarring@precisionplanting.com
-  meisosk@gmail.com
+  - https://github.com/mirandamorton1
+  - https://github.com/nmanwarring
+  - https://github.com/Meisosk 
+  #### Email: 
+  - miranda.morton1@gmail.com
+  - nathan.manwarring@precisionplanting.com
+  - meisosk@gmail.com
   This project: https://github.com/mirandamorton1/Music-N-Motion

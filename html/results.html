@@ -42,16 +42,20 @@
       </a>
       <h2 class="results-title">Here's Your Plan!</h2>
     </div>
+
+    <!-- top two containers -->
     <div class="top-row">
+
+      <!-- workout container  -->
       <div id="workout-rec" class = "top-container">
         <h4 class="title">Your workout</h4>
         <div class="workout-container res-container hidden-container row">
-          <div class="yourWorkout d-flex">
-            <div class="workoutAdvice">
+          <div class="your-workout d-flex">
+            <div class="workout-advice">
               <p class="advice-title">Workout:</p>
               <p id="workout-name"></p>
             </div>
-            <div class="workoutAdvice">
+            <div class="workout-advice">
               <p class="advice-title">Equipment:</p>
               <p id="equipment"></p>
             </div>
@@ -69,6 +73,7 @@
               Workout Details
             </button>
           </div>
+
           <!-- Modal -->
           <div
             class="modal fade"
@@ -109,13 +114,14 @@
           </div>
         </div>
       </div>
+
+      <!-- timer container -->
       <div id="timer" class = "top-container">
         <h4 id="timer-title" class = "title">Workout Timer</h4>
         <div
-          id="timer-container"
-          class="res-container d-flex flex-column justify-content-center"
+          class="timer-container res-container d-flex flex-column justify-content-center"
         >
-          <div id="timeDisplay">00:00.00</div>
+          <div class = "time-display">00:00.00</div>
           <div class="d-flex flex-row justify-content-center">
             <button id="startBtn" class="timerBtn top-row-btn btn fa">&#xf04b;</button>
             <button id="pauseBtn" class="timerBtn top-row-btn btn fa">&#xf04c;</button>
@@ -125,6 +131,7 @@
       </div>
     </div>
 
+    <!-- spotify container -->
     <h4 class="music-title title">Recomended Spotify playlist</h4>
     <div class="music-container res-container hidden-container">
       <iframe
@@ -141,7 +148,6 @@
       integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
       crossorigin="anonymous"
     ></script>
-
     <script src="/js/results.js"></script>
   </body>
 </html>

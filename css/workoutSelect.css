@@ -3,11 +3,11 @@ body {
   margin: 0;
   background-image: linear-gradient(
     to right bottom,
-    #90E0EF,
-    #A0E4F1,
-    #AEE8F4,
-    #BCECF6,
-    #CAF0F8
+    #90e0ef,
+    #a0e4f1,
+    #aee8f4,
+    #bcecf6,
+    #caf0f8
   );
   background-size: cover;
   background-attachment: fixed;
@@ -46,14 +46,14 @@ form {
   box-shadow: rgba(0, 0, 0, 0.2) 7px 7px 20px;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 15vh;
-  margin-right: 15vh;
+  margin-left: 20vh;
+  margin-right: 20vh;
 }
 .btn {
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
-  margin: 5px;
+  margin: 10px 5px;
   align-content: center;
   justify-content: space-around;
 }
@@ -75,7 +75,7 @@ form {
   color: white;
 }
 label {
-  background-color: #41BFDD !important;
+  background-color: #41bfdd !important;
   color: white !important;
   font-size: 20px !important;
   font-family: "Roboto Mono", sans-serif !important;
@@ -84,16 +84,16 @@ label {
 }
 label:hover {
   background-color: white !important;
-  color: #0096C7 !important;
-  border: 1px solid #0096C7 !important;
+  color: #0096c7 !important;
+  border: 1px solid #0096c7 !important;
 }
 label:active {
   transform: translate(0px, 3px) !important;
 }
 input[type="radio"]:checked + label {
   background-color: white !important;
-  color: #0096C7 !important;
-  border: 1px solid #0096C7 !important;
+  color: #0096c7 !important;
+  border: 1px solid #0096c7 !important;
 }
 * > .fa-hover-show,
 *:hover > .fa-hover-hidden {
@@ -114,8 +114,13 @@ input[type="radio"]:checked + label .fa-hover-hidden {
   border-radius: 10px;
 }
 
-
 .group {
-  background-color: #0077B6 !important;
+  background-color: #0077b6 !important;
   justify-content: space-evenly !important;
+}
+@media (max-width: 768px) {
+  form {
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
 }

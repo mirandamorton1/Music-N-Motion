@@ -29,7 +29,7 @@
   const iframe = document.querySelector("iframe");
 
   const token =
-    "BQDijNEkky_wAqSOegJSNJsOnJyCp44RHnfzXHheN3dB13cusRqzrdZDxua9a5huSqzlYbNgDhUt_6Ur5hw19xkoDZiB5_UfZfZ_pW3SA3wrtaCFu_Fvi5LrIZwy6k4dpS4Sc-bpTNHga2xk_DhkmW1Yd5_xWrvwJuU_PUpAqB7qM8esn1WBmYbZpADXTld5-AVB0jxQUpPTHWyNwmlivN0RxZ14tfT1epa0bZRdwMZvoUWkYRf-SUssoU551NJxjoqSj2LnsNCYf_gIlPr3kECm";
+    "BQC5aGn79dPrYezXnkmbl_Oj4aqMbVcaBnfSn3ckot5CmCIoBc2Ls2F4gi3EGWX68nxDKpMueKfOZ2ndZDMZnQLItTWx3l8jLAlingDosDA9VsU_sYYdoSnkv6EePF_IdGlpKurFPs5bNbphZhQsV30MSq2sg-4ZDy8YGxRdvVZsnIvSXTRrj4uZ69LSzLv2N-4w0NHoBhf-XRakYBeLn9fmOIDH90fvft-9tkuSgjI0itoQY9_76fvvbdUlMfEVK2B03IdzD0oD66Tt3PGeOGgd";
   async function fetchWebApi(endpoint, method, body) {
     const res = await fetch(`https://api.spotify.com/${endpoint}`, {
       headers: {

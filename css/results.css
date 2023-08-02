@@ -58,7 +58,7 @@ p {
     #90e0ef
   );
   border-radius: 9px;
-  box-shadow: rgba(0, 0, 0, 0.7) 7px 7px 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 7px 7px 20px;
 }
 
 .workout-title {

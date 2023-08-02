@@ -1,14 +1,6 @@
 (async () => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  });
-  const hiddenElements = document.querySelectorAll(".hidden-container");
-  hiddenElements.forEach((el) => observer.observe(el));
-
+  
+  // populating the your-workout-container and changing the underscores to spaces
   const instructions = localStorage.getItem("instructions");
   const instructionDiv = document.querySelector(".workoutDiscr");
   instructionDiv.innerText += instructions;
@@ -25,12 +17,17 @@
     .replace(/\b\w/g, (match) => match.toLocaleUpperCase());
   equipment.innerText += equipmentToPage;
 
+  // gettiing the category from the workoutSelect page to choose the genre for thew platlist late
   const category = localStorage.getItem("category");
+
   const iframe = document.querySelector("iframe");
 
+  // token to allow fetching from the spotify api
   const token =
-    "BQAWF6VIM7XeVM8F3mw7GpNF06ISb-VwaWDzs9Jh7WFUlig8r5fA0DIqrGbOAccDi5dAbfqbBDI2BSShAG0u2FkGmWcnz6MoSdZ0XIKXMQA1G8waiOeIJjCWmaMCiIEsNMYteLTKKL7LN2BcjNEXtLnSMH7bCiV1_GgC4MM3qs7ZXMElm7MTk6rGVd8QrQIHijYZeI4W6LMDF5TJ7KnZ7nm2XvUOazPM2eplYRinVI600KuoFUs-k5-PrUfGdWQscNkShwb72j7ndY3SkN4fzFDy";
-  async function fetchWebApi(endpoint, method, body) {
+    "BQD4FDAyCAESUTJP0g0sRHSHrC5Kb_PWOpW8HYS8T5UOVVevWSCBDZrf7_osFQX9fag_rJxNhfbJ7cnotA9t35xMBOc2wVWHifwkD9M-tQKeNLi5z9unhhpCBczZ-FwaEuSgX_13O4QaIPhy7e6xWD54zHZX3PJr7Pcf3Wn9pneRP8Fv5npivTz5-WsGMW3sqAjO2iTOyFg2CzJUVJLoyG7rqApTNgasNKLFSO9gatvo9p4CIwNCZj7epw0_pEO060rfxZq_No5MMaNwO68Q-guB";
+  
+
+    async function fetchWebApi(endpoint, method, body) {
     const res = await fetch(`https://api.spotify.com/${endpoint}`, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -42,6 +39,7 @@
     return await res.json();
   }
 
+  // picks songs for the playlist depending on category
   async function getTracksByGenre(genre) {
     const response = await fetchWebApi(
       `v1/search?q=genre:${encodeURIComponent(genre)}&type=track&limit=10`,
@@ -72,6 +70,7 @@
     return playlist;
   }
 
+  // setting genre and actually making the playlist
   let genre = "";
 
   if (category == "olympic_weightlifting") {
@@ -97,6 +96,7 @@
   iframe.src = `https://open.spotify.com/embed/playlist/${createdPlaylist.id}?utm_source=generator&theme=0`;
 })();
 
+// JS for making the timer function
 class StopWatch {
   constructor() {
     this.startTime = 0;
@@ -148,7 +148,7 @@ class StopWatch {
       .slice(0, 2);
     this.secs = this.pad(this.secs);
     this.mins = this.pad(this.mins);
-    const timeDisplay = document.querySelector("#timeDisplay");
+    const timeDisplay = document.querySelector(".time-display");
     timeDisplay.innerHTML = `${this.mins}:${this.secs}.${this.elapsedTime}`;
   }
 

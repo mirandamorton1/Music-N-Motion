@@ -45,7 +45,8 @@ Screenshots will go here:
   Meir Soskil
   ### Questions:
   If you have any questions regarding this app, feel free to contact me: 
-  #### GitHub: https://github.com/mirandamorton1
+  #### GitHub: 
+  https://github.com/mirandamorton1
   https://github.com/nmanwarring
   https://github.com/Meisosk 
   #### Email: miranda.morton1@gmail.com

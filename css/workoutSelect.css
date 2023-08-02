@@ -57,18 +57,11 @@ form {
 
 .btn {
   display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-  margin: 5px;
-  align-content: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .btn-group {
   display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: space-around;
 }
 
 #submitButton {
@@ -89,8 +82,6 @@ label {
   color: white !important;
   font-size: 20px !important;
   font-family: "Roboto Mono", sans-serif !important;
-  justify-content: space-around;
-  align-items: center;
 }
 
 label:hover {
@@ -101,9 +92,10 @@ label:hover {
 
 label:active {
   transform: translate(0px, 3px) !important;
+
 }
 
-input[type="radio"]:checked + label {
+input[type="radio"]:checked+label {
   background-color: white !important;
   color: #0096c7 !important;
   border: 1px solid #0096c7 !important;
@@ -118,11 +110,11 @@ input[type="radio"]:checked + label {
 }
 
 input[type="radio"]:checked + label .fa-hover-show {
-  display: inline-block !important;
-}
+    display: inline-block !important;
+  }
 
 input[type="radio"]:checked + label .fa-hover-hidden {
-  display: none !important;
+    display: none !important;
 }
 
 .icons {
@@ -130,3 +122,5 @@ input[type="radio"]:checked + label .fa-hover-hidden {
   width: 40px;
   border-radius: 10px;
 }
+
+

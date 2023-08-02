@@ -14,7 +14,7 @@ body {
 }
 
 .hero2-image {
-  background-image: url("/assets/images/photo18.png");
+  background-image: url("/assets/images/photo20.png");
   height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -81,7 +81,7 @@ label {
   background-color: #41bfdd !important;
   color: white !important;
   font-size: 20px !important;
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Roboto Mono", sans-serif !important;
 }
 
 label:hover {

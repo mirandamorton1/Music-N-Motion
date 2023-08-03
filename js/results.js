@@ -1,103 +1,98 @@
- // populating the your-workout-container  
-  const instructions = localStorage.getItem("instructions");
-  const instructionDiv = document.querySelector(".workoutDiscr");
-  instructionDiv.innerText += instructions;
-  const workoutName = document.getElementById("workout-name");
-  const typeOfWorkout = localStorage.getItem("name");
-  const equipment = document.getElementById("equipment");
-  const typeOfEquipment = localStorage.getItem("equipment");
+// populating the your-workout-container
+const instructions = localStorage.getItem("instructions");
+const instructionDiv = document.querySelector(".workoutDiscr");
+instructionDiv.innerText += instructions;
+const workoutName = document.getElementById("workout-name");
+const typeOfWorkout = localStorage.getItem("name");
+const equipment = document.getElementById("equipment");
+const typeOfEquipment = localStorage.getItem("equipment");
 
-  // changing the underscores to spaces and making sure the first letter of every word is capitalized
-  function noUnderScore(name, type){
-    let noUnderScoreString = " ";
-    noUnderScoreString += type.replace(/_/g, " ")
-    .replace(/\b\w/g, (match) => match.toLocaleUpperCase())
-    name.innerText += noUnderScoreString;
-  }
-noUnderScore(workoutName, typeOfWorkout)
-noUnderScore(equipment, typeOfEquipment)
+// changing the underscores to spaces and making sure the first letter of every word is capitalized
+function noUnderScore(name, type) {
+  let noUnderScoreString = " ";
+  noUnderScoreString += type
+    .replace(/_/g, " ")
+    .replace(/\b\w/g, (match) => match.toLocaleUpperCase());
+  name.innerText += noUnderScoreString;
+}
+noUnderScore(workoutName, typeOfWorkout);
+noUnderScore(equipment, typeOfEquipment);
 
-  // gettiing the category from the workoutSelect page to choose the genre for thew platlist late
-  const category = localStorage.getItem("category");
+// gettiing the category from the workoutSelect page to choose the genre for thew platlist late
+const category = localStorage.getItem("category");
 
-  const iframe = document.querySelector("iframe");
+const iframe = document.querySelector("iframe");
 
-  // token to allow fetching from the spotify api
-  const token =
-    "BQCTk0W1lsSk2VOWxUDRFeTlM1hlzPwP32nHUJFId0iKzwuahLXOHK1CwlIh69H38iRy_ZZdqn1oPz-VLg3NkMgjeN7Ua5whD8MXYS80P73RR4aJQqfqy_DtLfg_Q6raSEcL0fLxoZRsF6Cs6L-OfvgQTmvu3uVJL8_U92eM0j6kzWAJ07BC1IzY9vtfVrmCpOkYzLBfmegFCacpeDRgO2O7j8DAnFJrxCMT6jYgqbrxP1geQO5pqLZFmzclWyWZQ5mMuE9r8BBzL4WMzqw8MKMV";
-  
-    async function fetchWebApi(endpoint, method, body) {
-    const res = await fetch(`https://api.spotify.com/${endpoint}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      method,
-      body: JSON.stringify(body),
-    });
+// token to allow fetching from the spotify api
+const token =
+  "BQCTk0W1lsSk2VOWxUDRFeTlM1hlzPwP32nHUJFId0iKzwuahLXOHK1CwlIh69H38iRy_ZZdqn1oPz-VLg3NkMgjeN7Ua5whD8MXYS80P73RR4aJQqfqy_DtLfg_Q6raSEcL0fLxoZRsF6Cs6L-OfvgQTmvu3uVJL8_U92eM0j6kzWAJ07BC1IzY9vtfVrmCpOkYzLBfmegFCacpeDRgO2O7j8DAnFJrxCMT6jYgqbrxP1geQO5pqLZFmzclWyWZQ5mMuE9r8BBzL4WMzqw8MKMV";
 
-    return await res.json();
-  }
+async function fetchWebApi(endpoint, method, body) {
+  const res = await fetch(`https://api.spotify.com/${endpoint}`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    method,
+    body: JSON.stringify(body),
+  });
 
-  // picks songs for the playlist depending on category
-  async function getTracksByGenre(genre) {
-    const response = await fetchWebApi(
-      `v1/search?q=genre:${encodeURIComponent(genre)}&type=track&limit=10`,
-      "GET"
-    );
+  return await res.json();
+}
 
-    return response.tracks.items.map((item) => item.uri);
-  }
+// picks songs for the playlist depending on category
+async function getTracksByGenre(genre) {
+  const response = await fetchWebApi(
+    `v1/search?q=genre:${encodeURIComponent(genre)}&type=track&limit=10`,
+    "GET"
+  );
 
-  async function createPlaylist(tracksUri) {
-    const { id: user_id } = await fetchWebApi("v1/me", "GET");
+  return response.tracks.items.map((item) => item.uri);
+}
 
-    const playlist = await fetchWebApi(
-      `v1/users/${user_id}/playlists`,
-      "POST",
-      {
-        name: "Your recommendation workout playlist ",
-        description:
-          "Playlist created by the tutorial on developer.spotify.com",
-        public: false,
-      }
-    );
-    await fetchWebApi(
-      `v1/playlists/${playlist.id}/tracks?uris=${tracksUri.join(",")}`,
-      "POST"
-    );
+async function createPlaylist(tracksUri) {
+  const { id: user_id } = await fetchWebApi("v1/me", "GET");
 
-    return playlist;
-  }
+  const playlist = await fetchWebApi(`v1/users/${user_id}/playlists`, "POST", {
+    name: "Your recommendation workout playlist ",
+    description: "Playlist created by the tutorial on developer.spotify.com",
+    public: false,
+  });
+  await fetchWebApi(
+    `v1/playlists/${playlist.id}/tracks?uris=${tracksUri.join(",")}`,
+    "POST"
+  );
 
-  // setting genre and actually making the playlist
-  let genre = "";
+  return playlist;
+}
 
-  if (category == "olympic_weightlifting") {
-    genre = "metalcore";
-  } else if (category == "cardio") {
-    genre = "power";
-  } else if (category == "ploymetrics") {
-    genre = "workout";
-  } else if (category == "powerlifting") {
-    genre = "heavy-metal";
-  } else if (category == "strength") {
-    genre = "punk-rock";
-  } else if (category == "stretching") {
-    genre = "dance";
-  } else if (category == "strongman") {
-    genre = "death-metal";
-  } else {
-    genre = "power-pop";
-  }
+// setting genre and actually making the playlist
+let genre = "";
 
-  // actually shows the playlist on screen
-  async function populateIframe() {
-    const tracksUri = await getTracksByGenre(genre);
-    const createdPlaylist = await createPlaylist(tracksUri);
-    iframe.src = `https://open.spotify.com/embed/playlist/${createdPlaylist.id}?utm_source=generator&theme=0`;
+if (category == "olympic_weightlifting") {
+  genre = "metalcore";
+} else if (category == "cardio") {
+  genre = "power";
+} else if (category == "ploymetrics") {
+  genre = "workout";
+} else if (category == "powerlifting") {
+  genre = "heavy-metal";
+} else if (category == "strength") {
+  genre = "punk-rock";
+} else if (category == "stretching") {
+  genre = "dance";
+} else if (category == "strongman") {
+  genre = "death-metal";
+} else {
+  genre = "power-pop";
+}
 
-  }
-  populateIframe()
+// actually shows the playlist on screen
+async function populateIframe() {
+  const tracksUri = await getTracksByGenre(genre);
+  const createdPlaylist = await createPlaylist(tracksUri);
+  iframe.src = `https://open.spotify.com/embed/playlist/${createdPlaylist.id}?utm_source=generator&theme=0`;
+}
+populateIframe();
 
 // JS for making the timer function
 class StopWatch {

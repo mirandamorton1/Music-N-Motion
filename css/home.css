@@ -53,7 +53,6 @@ body {
 
 #start-workout:hover {
   background-color: #979797;
-  /* transition: background-color 0.35s; */
   color: white;
 }
 
@@ -68,13 +67,3 @@ body {
     font-size: 15px;
   }
 }
-
-/* .button-arrow {
-  position: relative;
-  left: 0;
-  transition: 0.2s all ease-in-out;
-} */
-
-/* .button-arrow:hover {
-  left: 5px;
-} */

@@ -7,6 +7,15 @@
   
 <img width="1210" alt="hero1" src="https://github.com/mirandamorton1/Music-N-Motion/assets/107001559/f19718de-4a26-4a0b-bd0e-58ab3e08c8aa">
 
+<img width="1491" alt="Screenshot 2023-08-03 at 1 57 11 PM" src="https://github.com/mirandamorton1/Music-N-Motion/assets/107001559/08b05595-22c0-4e01-9535-462938fce1d0">
+
+<img width="1488" alt="Screenshot 2023-08-03 at 1 57 38 PM" src="https://github.com/mirandamorton1/Music-N-Motion/assets/107001559/f00e37ae-0628-441a-89dd-ab2930693548">
+
+![image_720](https://github.com/mirandamorton1/Music-N-Motion/assets/107001559/328c3bed-b16a-4fc2-b533-1ec9752ba7fe)
+
+
+
+
 
   ## Table of Contents
   * [Description](#description)
@@ -54,4 +63,4 @@
   - nathan.manwarring@precisionplanting.com
   - meisosk@gmail.com
 
-This project: https://github.com/mirandamorton1/Music-N-Motion
+This project was deployed at: https://github.com/mirandamorton1/Music-N-Motion

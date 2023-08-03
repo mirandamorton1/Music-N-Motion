@@ -49,6 +49,14 @@ form {
   margin-left: 20vh;
   margin-right: 20vh;
 }
+#form1 {
+  border: none;
+}
+
+#form-2 {
+  border: none;
+}
+
 .btn {
   display: flex;
   flex-wrap: wrap;

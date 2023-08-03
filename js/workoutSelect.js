@@ -8,20 +8,20 @@ function displayRadioValue() {
   const levelHTML = document.querySelector("input[name=level]:checked");
   category = categoryHTML?.value;
   level = levelHTML?.value;
-  if(!category && !level) {
-    alert('Please Make a Selction')
-  } else if(!category) {
-    alert('Please Select Type of Exercise')
-  } else if(!level) {
-    alert('Please Select Level Of Difficulty')
-  } else  {
-  localStorage.setItem("category", categoryHTML.value);
-  localStorage.setItem("level", levelHTML.value);
-  getExercise(category, level);
-  setTimeout(() => {
-    window.location.href = "results.html";
-  }, 1000);
-  console.log(category, level)
+  if (!category && !level) {
+    alert("Please Make a Selction");
+  } else if (!category) {
+    alert("Please Select Type of Exercise");
+  } else if (!level) {
+    alert("Please Select Level Of Difficulty");
+  } else {
+    localStorage.setItem("category", categoryHTML.value);
+    localStorage.setItem("level", levelHTML.value);
+    getExercise(category, level);
+    setTimeout(() => {
+      window.location.href = "results.html";
+    }, 1000);
+    console.log(category, level);
   }
 }
 
@@ -36,14 +36,13 @@ function getExercise(category, level) {
       return response.json();
     })
     .then((data) => {
-      console.log(data)
+      console.log(data);
       const randomNum = Math.floor(Math.random() * data.length);
       const { name, equipment, instructions } = data[randomNum];
       // localStorage.clear();
       localStorage.setItem("name", name);
       localStorage.setItem("equipment", equipment);
       localStorage.setItem("instructions", instructions);
-
     });
 }
 

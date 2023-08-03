@@ -3,7 +3,6 @@ const submitBtn = document.getElementById("submitButton");
 function displayRadioValue() {
   let category = "";
   let level = "";
-
   const categoryHTML = document.querySelector("input[name=type]:checked");
   const levelHTML = document.querySelector("input[name=level]:checked");
   category = categoryHTML?.value;

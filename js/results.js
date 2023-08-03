@@ -1,21 +1,21 @@
-(async () => {
-  
-  // populating the your-workout-container and changing the underscores to spaces
+ // populating the your-workout-container  
   const instructions = localStorage.getItem("instructions");
   const instructionDiv = document.querySelector(".workoutDiscr");
   instructionDiv.innerText += instructions;
   const workoutName = document.getElementById("workout-name");
   const typeOfWorkout = localStorage.getItem("name");
-  let workoutTypeToPage = " ";
-  workoutTypeToPage += typeOfWorkout.replace(/_/g, " ");
-  workoutName.innerText += workoutTypeToPage;
   const equipment = document.getElementById("equipment");
   const typeOfEquipment = localStorage.getItem("equipment");
-  let equipmentToPage = " ";
-  equipmentToPage += typeOfEquipment
-    .replace(/_/g, " ")
-    .replace(/\b\w/g, (match) => match.toLocaleUpperCase());
-  equipment.innerText += equipmentToPage;
+
+  // changing the underscores to spaces and making sure the first letter of every word is capitalized
+  function noUnderScore(name, type){
+    let noUnderScoreString = " ";
+    noUnderScoreString += type.replace(/_/g, " ")
+    .replace(/\b\w/g, (match) => match.toLocaleUpperCase())
+    name.innerText += noUnderScoreString;
+  }
+noUnderScore(workoutName, typeOfWorkout)
+noUnderScore(equipment, typeOfEquipment)
 
   // gettiing the category from the workoutSelect page to choose the genre for thew platlist late
   const category = localStorage.getItem("category");
@@ -24,9 +24,8 @@
 
   // token to allow fetching from the spotify api
   const token =
-    "BQD4FDAyCAESUTJP0g0sRHSHrC5Kb_PWOpW8HYS8T5UOVVevWSCBDZrf7_osFQX9fag_rJxNhfbJ7cnotA9t35xMBOc2wVWHifwkD9M-tQKeNLi5z9unhhpCBczZ-FwaEuSgX_13O4QaIPhy7e6xWD54zHZX3PJr7Pcf3Wn9pneRP8Fv5npivTz5-WsGMW3sqAjO2iTOyFg2CzJUVJLoyG7rqApTNgasNKLFSO9gatvo9p4CIwNCZj7epw0_pEO060rfxZq_No5MMaNwO68Q-guB";
+    "BQB4Ht1W36bkD3WkSVk3WNycPS9_LHHAOcWrvxFp7Bufoy4SMqsJQnedlHwO0l7g7hYixUjGaoOBFKRYYpDOb_jTnPRa5dUw67Osjps0kheLhhBkwg7nxk_TcFpzUaWzj-DBYfqQoQNg-BhipZNDwMO1rXgr-HRW53qvBjpvcso2p5lEr-EhYTz58rh8PYA5qmq4IqINonqbQ5jbPp_ft0rc6OrqE6ioyb0F-jiKW5opiMi68p1y8hbIR1jkR_123ASlel5NlS45yN3rsE9gxkDv";
   
-
     async function fetchWebApi(endpoint, method, body) {
     const res = await fetch(`https://api.spotify.com/${endpoint}`, {
       headers: {
@@ -91,10 +90,14 @@
     genre = "power-pop";
   }
 
-  const tracksUri = await getTracksByGenre(genre);
-  const createdPlaylist = await createPlaylist(tracksUri);
-  iframe.src = `https://open.spotify.com/embed/playlist/${createdPlaylist.id}?utm_source=generator&theme=0`;
-})();
+  // actually shows the playlist on screen
+  async function populateIframe() {
+    const tracksUri = await getTracksByGenre(genre);
+    const createdPlaylist = await createPlaylist(tracksUri);
+    iframe.src = `https://open.spotify.com/embed/playlist/${createdPlaylist.id}?utm_source=generator&theme=0`;
+
+  }
+  populateIframe()
 
 // JS for making the timer function
 class StopWatch {

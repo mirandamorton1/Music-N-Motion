@@ -24,7 +24,7 @@ noUnderScore(equipment, typeOfEquipment)
 
   // token to allow fetching from the spotify api
   const token =
-    "BQB4Ht1W36bkD3WkSVk3WNycPS9_LHHAOcWrvxFp7Bufoy4SMqsJQnedlHwO0l7g7hYixUjGaoOBFKRYYpDOb_jTnPRa5dUw67Osjps0kheLhhBkwg7nxk_TcFpzUaWzj-DBYfqQoQNg-BhipZNDwMO1rXgr-HRW53qvBjpvcso2p5lEr-EhYTz58rh8PYA5qmq4IqINonqbQ5jbPp_ft0rc6OrqE6ioyb0F-jiKW5opiMi68p1y8hbIR1jkR_123ASlel5NlS45yN3rsE9gxkDv";
+    "BQCTk0W1lsSk2VOWxUDRFeTlM1hlzPwP32nHUJFId0iKzwuahLXOHK1CwlIh69H38iRy_ZZdqn1oPz-VLg3NkMgjeN7Ua5whD8MXYS80P73RR4aJQqfqy_DtLfg_Q6raSEcL0fLxoZRsF6Cs6L-OfvgQTmvu3uVJL8_U92eM0j6kzWAJ07BC1IzY9vtfVrmCpOkYzLBfmegFCacpeDRgO2O7j8DAnFJrxCMT6jYgqbrxP1geQO5pqLZFmzclWyWZQ5mMuE9r8BBzL4WMzqw8MKMV";
   
     async function fetchWebApi(endpoint, method, body) {
     const res = await fetch(`https://api.spotify.com/${endpoint}`, {

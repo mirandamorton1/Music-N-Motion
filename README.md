@@ -47,7 +47,7 @@ https://watch.screencastify.com/v/MUhTzPmMSm9mxDgtdXsX
   - HTML
   - CSS
   - JavaScript
-  - Ninja API
+  - API Ninjas
   - Spotify API
   ### Contributors: 
   To contribute to this project, clone this repo locally and commit your code on a separate branch. 
@@ -66,4 +66,4 @@ https://watch.screencastify.com/v/MUhTzPmMSm9mxDgtdXsX
   - nathan.manwarring@precisionplanting.com
   - meisosk@gmail.com
 
-This project was deployed at: https://musicinmotion.netlify.app/
+### This project was deployed at: https://musicinmotion.netlify.app/

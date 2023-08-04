@@ -20,7 +20,6 @@ function displayRadioValue() {
     setTimeout(() => {
       window.location.href = "results.html";
     }, 1000);
-    console.log(category, level);
   }
 }
 

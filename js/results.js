@@ -12,7 +12,7 @@ function noUnderScore(name, type) {
   let noUnderScoreString = " ";
   noUnderScoreString += type
     .replace(/_/g, " ")
-    .replace(/\b\w/g, (match) => match.toLocaleUpperCase());
+    .replace(/\b\w/g, (match) => match.toUpperCase());
   name.innerText += noUnderScoreString;
 }
 noUnderScore(workoutName, typeOfWorkout);
@@ -25,7 +25,7 @@ const iframe = document.querySelector("iframe");
 
 // token to allow fetching from the spotify api
 const token =
-  "BQCTk0W1lsSk2VOWxUDRFeTlM1hlzPwP32nHUJFId0iKzwuahLXOHK1CwlIh69H38iRy_ZZdqn1oPz-VLg3NkMgjeN7Ua5whD8MXYS80P73RR4aJQqfqy_DtLfg_Q6raSEcL0fLxoZRsF6Cs6L-OfvgQTmvu3uVJL8_U92eM0j6kzWAJ07BC1IzY9vtfVrmCpOkYzLBfmegFCacpeDRgO2O7j8DAnFJrxCMT6jYgqbrxP1geQO5pqLZFmzclWyWZQ5mMuE9r8BBzL4WMzqw8MKMV";
+  "BQBwyby5rci2gv83oVyAu_-dIp34bT7jbjKfSHA4ro_HSD3Ks5H4QJH8gwvy_nrkyqJirUbCL6YooSKAm2b7cHwqw3R8VpRw-OEfEsq1G7A9-_CiM8V8RC8o_aFZ-qDooOsjkDlCcLtMSd5IvOp5PaNKxE4NDrWGdCbLM2KwUkSo4yjgdE4EzyGwbcOdt7iTL3jt9H1kqqiXtQJoqSlZ5-pyu5V76UlHp_O3AV1EdF5wwGSOe5cF3DKJnhgoQF3eIKcKye_8-PVfddr9h2Rlxh3f";
 
 async function fetchWebApi(endpoint, method, body) {
   const res = await fetch(`https://api.spotify.com/${endpoint}`, {

@@ -21,9 +21,9 @@ body {
   position: relative;
 }
 .bi {
-  margin-left: 20px;
-  margin-top: 20px;
+  margin: 20px;
 }
+
 .hero2-text {
   text-align: center;
   position: absolute;
@@ -38,6 +38,7 @@ body {
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
   font-weight: bold;
 }
+
 form {
   border-radius: 20px;
   padding-left: 20px;
@@ -58,18 +59,13 @@ form {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
   flex-grow: 1;
   padding: 10px;
   margin: 10px 5px;
-  align-content: center;
-  justify-content: space-around;
 }
-.btn-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: space-around;
-}
+
 #submitButton {
   background-color: #ddd;
   margin: auto;
@@ -133,10 +129,10 @@ input[type="radio"]:checked + label .fa-hover-hidden {
 }
 @media (max-width: 768px) {
   form {
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin: 10vw;
   }
   label {
     font-size: 15px !important;
   }
 }
+

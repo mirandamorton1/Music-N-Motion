@@ -20,79 +20,166 @@ noUnderScore(equipment, typeOfEquipment);
 
 // gettiing the category from the workoutSelect page to choose the genre for thew platlist late
 const category = localStorage.getItem("category");
-
+console.log(category);
+const clientId = "057858eb5b834042854d8d57d5e03028";
+const params = new URLSearchParams(window.location.search);
+const code = params.get("code");
 const iframe = document.querySelector("iframe");
 
-// token to allow fetching from the spotify api
-const token =
-  "BQCmDoHHNSW_rIMxAjwA4e688Ej7T7D-7RClRnJNopZwEsP3RI7iY1zTAPpuCSx3S6FsjBSBq14_Dl3aeNesLvX4fdaDs5WhTbNGrW3KggeKet6ZDMMATZ0lyzBs6lAH1X490CXQqDj-rKuVtnlc1TauHjypED9GqInd5zILj-tNGsDiHVjS5rHQpnql0gd9rSppUW6OfCxi2JDgDocJELtCRKia_SyzaVrgwRYtT5r26o5Zcrcfn6Xi5RqXW1VIIE19L-jtSUtvnKwazWXhzgkK";
+async function main() {
+  if (!code) {
+    redirectToAuthCodeFlow(clientId);
+  } else {
+    const accessToken = await getAccessToken(clientId, code);
+    populateIframe(accessToken, category);
+  }
 
-async function fetchWebApi(endpoint, method, body) {
-  const res = await fetch(`https://api.spotify.com/${endpoint}`, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-    method,
-    body: JSON.stringify(body),
-  });
+  async function redirectToAuthCodeFlow(clientId) {
+    const verifier = generateCodeVerifier(128);
 
-  return await res.json();
+    const challenge = await generateCodeChallenge(verifier);
+
+    localStorage.setItem("verifier", verifier);
+    console.log("local storage", localStorage);
+    const params = new URLSearchParams();
+    params.append("client_id", clientId);
+    params.append("response_type", "code");
+    params.append(
+      "redirect_uri",
+      "https://musicinmotion.netlify.app/results.html"
+    );
+    params.append(
+      "scope",
+      "user-read-private user-read-email playlist-modify-private"
+    );
+    params.append("code_challenge_method", "S256");
+    params.append("code_challenge", challenge);
+    console.log("params", params.toString());
+
+    document.location = `https://accounts.spotify.com/authorize?${params.toString()}`;
+  }
+
+  function generateCodeVerifier(length) {
+    let text = "";
+    let possible =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (let i = 0; i < length; i++) {
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    return text;
+  }
+
+  async function generateCodeChallenge(codeVerifier) {
+    const data = new TextEncoder().encode(codeVerifier);
+    const digest = await window.crypto.subtle.digest("SHA-256", data);
+    return btoa(String.fromCharCode.apply(null, [...new Uint8Array(digest)]))
+      .replace(/\+/g, "-")
+      .replace(/\//g, "_")
+      .replace(/=+$/, "");
+  }
+
+  async function getAccessToken(clientId, code) {
+    const verifier = localStorage.getItem("verifier");
+
+    const params = new URLSearchParams();
+    params.append("client_id", clientId);
+    params.append("grant_type", "authorization_code");
+    params.append("code", code);
+    params.append(
+      "redirect_uri",
+      "https://musicinmotion.netlify.app/results.html"
+    );
+    params.append("code_verifier", verifier);
+
+    const result = await fetch("https://accounts.spotify.com/api/token", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: params,
+    });
+
+    const { access_token } = await result.json();
+    return access_token;
+  }
+
+  async function fetchWebApi(endpoint, token, method, body) {
+    const res = await fetch(`https://api.spotify.com/${endpoint}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      method,
+      body: JSON.stringify(body),
+    });
+
+    return await res.json();
+  }
+
+  async function getTracksByGenre(genre, token) {
+    const response = await fetchWebApi(
+      `v1/search?q=genre:${encodeURIComponent(genre)}&type=track&limit=10`,
+      token,
+      "GET"
+    );
+    return response.tracks.items.map((item) => item.uri);
+  }
+
+  async function createPlaylist(tracksUri, token) {
+    const { id: user_id } = await fetchWebApi("v1/me", token, "GET");
+
+    const playlist = await fetchWebApi(
+      `v1/users/${user_id}/playlists`,
+      token,
+      "POST",
+      {
+        name: "Your recommendation workout playlist ",
+        description:
+          "Playlist created by the tutorial on developer.spotify.com",
+        public: false,
+      }
+    );
+    console.log(playlist);
+
+    await fetchWebApi(
+      `v1/playlists/${playlist.id}/tracks?uris=${tracksUri.join(",")}`,
+      token,
+      "POST"
+    );
+
+    return playlist;
+  }
+
+  // setting genre and actually making the playlist
+  async function populateIframe(token, category) {
+    let genre = "";
+
+    if (category == "olympic_weightlifting") {
+      genre = "metalcore";
+    } else if (category == "cardio") {
+      genre = "power";
+    } else if (category == "ploymetrics") {
+      genre = "workout";
+    } else if (category == "powerlifting") {
+      genre = "heavy-metal";
+    } else if (category == "strength") {
+      genre = "punk-rock";
+    } else if (category == "stretching") {
+      genre = "dance";
+    } else if (category == "strongman") {
+      genre = "death-metal";
+    } else {
+      genre = "power-pop";
+    }
+
+    // actually shows the playlist on screen
+
+    const tracksUri = await getTracksByGenre(genre, token);
+
+    const createdPlaylist = await createPlaylist(tracksUri, token);
+
+    iframe.src = `https://open.spotify.com/embed/playlist/${createdPlaylist.id}?utm_source=generator&theme=0`;
+  }
 }
-
-// picks songs for the playlist depending on category
-async function getTracksByGenre(genre) {
-  const response = await fetchWebApi(
-    `v1/search?q=genre:${encodeURIComponent(genre)}&type=track&limit=10`,
-    "GET"
-  );
-
-  return response.tracks.items.map((item) => item.uri);
-}
-
-async function createPlaylist(tracksUri) {
-  const { id: user_id } = await fetchWebApi("v1/me", "GET");
-
-  const playlist = await fetchWebApi(`v1/users/${user_id}/playlists`, "POST", {
-    name: "Your recommendation workout playlist ",
-    description: "Playlist created by the tutorial on developer.spotify.com",
-    public: false,
-  });
-  await fetchWebApi(
-    `v1/playlists/${playlist.id}/tracks?uris=${tracksUri.join(",")}`,
-    "POST"
-  );
-
-  return playlist;
-}
-
-// setting genre and actually making the playlist
-let genre = "";
-
-if (category == "olympic_weightlifting") {
-  genre = "metalcore";
-} else if (category == "cardio") {
-  genre = "power";
-} else if (category == "ploymetrics") {
-  genre = "workout";
-} else if (category == "powerlifting") {
-  genre = "heavy-metal";
-} else if (category == "strength") {
-  genre = "punk-rock";
-} else if (category == "stretching") {
-  genre = "dance";
-} else if (category == "strongman") {
-  genre = "death-metal";
-} else {
-  genre = "power-pop";
-}
-
-// actually shows the playlist on screen
-async function populateIframe() {
-  const tracksUri = await getTracksByGenre(genre);
-  const createdPlaylist = await createPlaylist(tracksUri);
-  iframe.src = `https://open.spotify.com/embed/playlist/${createdPlaylist.id}?utm_source=generator&theme=0`;
-}
-populateIframe();
+main();
 
 // JS for making the timer function
 class StopWatch {
